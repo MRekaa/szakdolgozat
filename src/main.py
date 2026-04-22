@@ -92,6 +92,8 @@ class Main:
         self.display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), pygame.RESIZABLE)
         pygame.display.set_caption('Labor')
 
+        self.clock = pygame.time.Clock()
+
         self.screen_width, self.screen_height = self.display_surface.get_size()
         self.game = Game((WINDOW_WIDTH, WINDOW_HEIGHT))
         self.reaction = Reaction(self)
@@ -172,6 +174,7 @@ class Main:
             self._draw()
 
             pygame.display.update()
+            self.clock.tick(60)
 
 if __name__ == '__main__':
     main = Main()

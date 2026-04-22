@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.24)  22 APR 2026 18:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.24)  22 APR 2026 20:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -562,25 +562,25 @@ Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 )) (./EY52H0_2026.aux)
 \openout1 = `EY52H0_2026.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-Package hyperref Info: Link coloring OFF on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+Package hyperref Info: Link coloring OFF on input line 16.
 
 (./EY52H0_2026.out) (./EY52H0_2026.out)
 \@outlinefile=\write3
@@ -622,50 +622,50 @@ Package hyperref Info: Link coloring OFF on input line 17.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-7.
+6.
 (c:/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-7.
+6.
 
 (c:/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-17.
+16.
 
 (c:/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-17.
+16.
 
 (c:/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 17.
+(Font)              <12> on input line 16.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 17.
+(Font)              <8> on input line 16.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 17.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+(Font)              <6> on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
 
 
 (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
 
 
 (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 17.
+(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 16.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 17.
+(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 16.
 
 (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -708,11 +708,11 @@ LaTeX Info: Redefining \cal on input line 577.
 LaTeX Info: Redefining \mit on input line 578.
 )
 Package babel Info: 'magyar' activates 'magyar' shorthands.
-(babel)             Reported on input line 17.
-<eszterhazy-logo-hu.pdf, id=152, 256.07971pt x 88.04292pt>
+(babel)             Reported on input line 16.
+<eszterhazy-logo-hu.pdf, id=168, 256.07971pt x 88.04292pt>
 File: eszterhazy-logo-hu.pdf Graphic file (type pdf)
 <use eszterhazy-logo-hu.pdf>
-Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 25.
+Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 24.
 (pdftex.def)             Requested size: 256.07907pt x 88.0427pt.
  [1
 
@@ -740,198 +740,274 @@ thesis-ekf/eszterhazy-logo-hu.pdf>] (./EY52H0_2026.toc [2
 [7
 
 ]
-Overfull \hbox (26.72939pt too wide) in paragraph at lines 117--118
+Overfull \hbox (26.72939pt too wide) in paragraph at lines 125--126
 []\T1/lmr/bx/n/12 Nyílt for-rás-kód: \T1/lmr/m/n/12 Az al-kal-ma-zás for-rás-kó
 d-ja pub-li-ku-san el-ér-he-t® a Git-Hub repository-
  []
 
 [8]
-Overfull \hbox (17.06229pt too wide) in paragraph at lines 130--131
+Overfull \hbox (17.06229pt too wide) in paragraph at lines 138--139
 []\T1/lmr/m/n/12 A gra-fi-kus al-kal-ma-zás fej-lesz-té-se szem-pont-já-ból kü-
 lön el®nyt je-len-tett, hogy a PyCharm
  []
 
+[9]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-54.
-(c:/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
+62.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [9] [10] [11]
+) [10] [11]
 3. fejezet.
 [12
 
-] [13] [14]
+]
+Underfull \hbox (badness 1546) in paragraph at lines 236--237
+[]|\T1/lmr/m/n/10 Új Ite-mOn-Board ob-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
+[]|\T1/lmr/m/n/10 Két Ite-mOn-Board
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
+\T1/lmr/m/n/10 ob-jek-tum (anya-
+ []
+
+
+Underfull \hbox (badness 4886) in paragraph at lines 242--243
+[]|\T1/lmr/m/n/10 Definiált re-ak-ció ese-tén
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 255--256
+[]|\T1/lmr/m/n/10 Felhasználói kat-tin-tás
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
+[]|\T1/lmr/m/n/10 Hotbar tar-tal-má-nak
+ []
+
+
+Overfull \hbox (21.54718pt too wide) in paragraph at lines 230--260
+ [][] 
+ []
+
+[13] [14] [15]
 4. fejezet.
 
-Overfull \hbox (2.17798pt too wide) in paragraph at lines 269--270
+Overfull \hbox (14.77164pt too wide) in paragraph at lines 312--313
+\T1/lmr/m/n/12 sét ke-ze-li. Ez a ré-teg a MySQL adat-bá-zis-sal kap-cso-ló-dik
+ a \T1/lmtt/m/n/12 mysql-connector-python
+ []
+
+
+Overfull \hbox (2.17798pt too wide) in paragraph at lines 328--329
 []\T1/lmr/m/n/12 Az összes töb-bi kom-po-nens ini-ci-a-li-zá-lá-sa (Hot-bar, Re
 -ac-ti-on, Se-archSys-tem, Trash) 
  []
 
-[15
+[16
 
-] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
+] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
 
  []
 
-<hotbarM.png, id=342, 759.58781pt x 115.18031pt>
+<hotbarM.png, id=370, 759.58781pt x 115.18031pt>
 File: hotbarM.png Graphic file (type png)
 <use hotbarM.png>
-Package pdftex.def Info: hotbarM.png  used on input line 315.
+Package pdftex.def Info: hotbarM.png  used on input line 375.
 (pdftex.def)             Requested size: 308.71106pt x 46.8112pt.
-<hotbarT.png, id=344, 602.25pt x 117.43875pt>
+<hotbarT.png, id=372, 602.25pt x 117.43875pt>
 File: hotbarT.png Graphic file (type png)
 <use hotbarT.png>
-Package pdftex.def Info: hotbarT.png  used on input line 322.
+Package pdftex.def Info: hotbarT.png  used on input line 382.
 (pdftex.def)             Requested size: 308.71106pt x 60.20117pt.
-<trashClosed.png, id=347, 67.75313pt x 64.74188pt>
+<trashClosed.png, id=375, 67.75313pt x 64.74188pt>
 File: trashClosed.png Graphic file (type png)
 <use trashClosed.png>
-Package pdftex.def Info: trashClosed.png  used on input line 343.
+Package pdftex.def Info: trashClosed.png  used on input line 403.
 (pdftex.def)             Requested size: 176.40439pt x 168.57088pt.
-<trashOpen.png, id=348, 73.02281pt x 56.46094pt>
+<trashOpen.png, id=376, 73.02281pt x 56.46094pt>
 File: trashOpen.png Graphic file (type png)
 <use trashOpen.png>
-Package pdftex.def Info: trashOpen.png  used on input line 350.
+Package pdftex.def Info: trashOpen.png  used on input line 410.
 (pdftex.def)             Requested size: 198.45662pt x 153.45967pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17 <./hotbarM.png> <./hotbarT.png>]
+[18 <./hotbarM.png> <./hotbarT.png>]
 (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 380.
+nput line 440.
  (./tool.py)
-[18 <./trashClosed.png> <./trashOpen.png>] [19]
+[19 <./trashClosed.png> <./trashOpen.png>] [20]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
-17.
+77.
 
 (c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [20{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [21]
-Overfull \hbox (20.82869pt too wide) in paragraph at lines 503--504
+) [21{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [22]
+Overfull \hbox (20.82869pt too wide) in paragraph at lines 563--564
 \T1/lmr/m/n/12 Az al-kal-ma-zás há-rom táb-lát hasz-nál, ame-lye-ket a []4.5[].
  áb-ra pre-zen-tál egy dbdiagrammal[[]]: 
  []
 
 
-Overfull \hbox (11.23914pt too wide) in paragraph at lines 505--506
+Overfull \hbox (11.23914pt too wide) in paragraph at lines 565--566
 []\T1/lmr/bx/n/12 reactions: \T1/lmr/m/n/12 A ké-mi-ai re-ak-ci-ó-kat de-fi-ni-
 ál-ja (item1,item2,result,equation,type). Item1
  []
 
-<dataBaseStructure.png, id=410, 322.20375pt x 142.28156pt>
+<dataBaseStructure.png, id=439, 322.20375pt x 142.28156pt>
 File: dataBaseStructure.png Graphic file (type png)
 <use dataBaseStructure.png>
-Package pdftex.def Info: dataBaseStructure.png  used on input line 513.
+Package pdftex.def Info: dataBaseStructure.png  used on input line 573.
 (pdftex.def)             Requested size: 308.71106pt x 136.3282pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22]
-<img/tools/Pipetta.png, id=423, 32.12pt x 32.12pt>
+[23]
+<img/tools/Pipetta.png, id=451, 32.12pt x 32.12pt>
 File: img/tools/Pipetta.png Graphic file (type png)
 <use img/tools/Pipetta.png>
-Package pdftex.def Info: img/tools/Pipetta.png  used on input line 541.
+Package pdftex.def Info: img/tools/Pipetta.png  used on input line 601.
 (pdftex.def)             Requested size: 198.45662pt x 198.52135pt.
-<img/materials/Pipetta(H2O).png, id=424, 32.12pt x 32.12pt>
+<img/materials/Pipetta(H2O).png, id=452, 32.12pt x 32.12pt>
 File: img/materials/Pipetta(H2O).png Graphic file (type png)
 <use img/materials/Pipetta(H2O).png>
-Package pdftex.def Info: img/materials/Pipetta(H2O).png  used on input line 548
+Package pdftex.def Info: img/materials/Pipetta(H2O).png  used on input line 608
 .
 (pdftex.def)             Requested size: 198.45662pt x 198.52135pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23 <./dataBaseStructure.png>] [24 <./img/tools/Pipetta.png> <./img/materials/P
+[24 <./dataBaseStructure.png>] [25 <./img/tools/Pipetta.png> <./img/materials/P
 ipetta(H2O).png>]
 5. fejezet.
 
-Overfull \hbox (65.12134pt too wide) in paragraph at lines 560--561
-[]\T1/lmr/m/n/12 A szük-sé-ges cso-ma-gok te-le-pí-té-se a vir-tu-á-lis kör-nye
--zet-be: \T1/lmtt/m/n/12 pygame \T1/lmr/m/n/12 és \T1/lmtt/m/n/12 mysql-connect
-or-python\T1/lmr/m/n/12 . 
- []
-
-
-Overfull \hbox (4.6159pt too wide) in paragraph at lines 571--572
+Overfull \hbox (4.6159pt too wide) in paragraph at lines 633--634
 []\T1/lmr/m/n/12 Ha a vir-tu-á-lis kör-nye-zet már ak-tív, elég köz-vet-le-nül 
 fut-tat-ni: \T1/lmtt/m/n/12 python src/main.py 
  []
 
-[25
+[26
 
 ]
 6. fejezet.
 
-Overfull \hbox (9.14719pt too wide) in paragraph at lines 582--617
+Overfull \hbox (9.14719pt too wide) in paragraph at lines 644--679
  [][] 
  []
 
 
-Overfull \hbox (9.14719pt too wide) in paragraph at lines 625--648
+Underfull \hbox (badness 2547) in paragraph at lines 692--693
+[]|\T1/lmr/m/n/10 H2O re-ak-ció in-teg-rá-ci-ós
+ []
+
+
+Underfull \hbox (badness 1303) in paragraph at lines 693--694
+[]|\T1/lmr/m/n/10 H2 + O2 el-he-lye-zé-se a
+ []
+
+
+Underfull \hbox (badness 1769) in paragraph at lines 694--695
+\T1/lmr/m/n/10 a pá-rost, can_react(H2,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--702
+[]|\T1/lmr/m/n/10 Reaction.check() fut,
+ []
+
+
+Underfull \hbox (badness 4156) in paragraph at lines 701--702
+\T1/lmr/m/n/10 can_react(Na, Cl) nem
+ []
+
+
+Underfull \hbox (badness 1642) in paragraph at lines 701--702
+\T1/lmr/m/n/10 ta-lál adat-bá-zis-be-li egye-
+ []
+
+
+Overfull \hbox (49.99994pt too wide) in paragraph at lines 688--707
  [][] 
  []
 
-[26
 
-] [27]
+Overfull \hbox (9.14719pt too wide) in paragraph at lines 716--739
+ [][] 
+ []
+
+[27
+
+] [28]
 7. fejezet.
-[28
 
-] [29]
-Underfull \hbox (badness 10000) in paragraph at lines 675--676
+Overfull \hbox (2.8091pt too wide) in paragraph at lines 756--757
+[]\T1/lmr/m/n/12 További kor-lát, hogy az al-kal-ma-zás tel-jes adatbázis-betöl
+tésre épül, így nagy mennyi-
+ []
+
+[29
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 766--767
 []\T1/lmr/m/sc/12 Python Soft-ware Fo-un-da-ti-on\T1/lmr/m/n/12 : \T1/lmr/m/it/
 12 Py-thon 3 hi-va-ta-los do-ku-men-tá-ció\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 5832) in paragraph at lines 681--682
+Underfull \hbox (badness 5832) in paragraph at lines 772--773
 []\T1/lmr/m/sc/12 JetBrains\T1/lmr/m/n/12 : \T1/lmr/m/it/12 PyCharm Gett-ing St
 ar-ted ^^U Hi-va-ta-los be-ve-ze-t® és út-mu-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--682
+Underfull \hbox (badness 10000) in paragraph at lines 772--773
 \T1/lmr/m/it/12 tó\T1/lmr/m/n/12 , https://www.jetbrains.com/help/pycharm/getti
 ng-started.html (Le-töl-tés:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 684--685
+Underfull \hbox (badness 10000) in paragraph at lines 775--776
 []\T1/lmr/m/sc/12 Apache Fri-ends\T1/lmr/m/n/12 : \T1/lmr/m/it/12 XAMPP hi-va-t
 a-los le-töl-té-si és do-ku-men-tá-ci-ós ol-dal\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 687--688
+Underfull \hbox (badness 10000) in paragraph at lines 778--779
 []\T1/lmr/m/sc/12 phpMyAdmin\T1/lmr/m/n/12 : \T1/lmr/m/it/12 Hi-va-ta-los phpMy
 -Ad-min do-ku-men-tá-ció és le-töl-té-si ol-dal\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 690--691
+Underfull \hbox (badness 10000) in paragraph at lines 781--782
 []\T1/lmr/m/sc/12 GitHub\T1/lmr/m/n/12 : \T1/lmr/m/it/12 Git-Hub té-mák és do-k
 u-men-tá-ci-ós gy¶j-te-mé-nyek\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 693--694
+Underfull \hbox (badness 10000) in paragraph at lines 784--785
 []\T1/lmr/m/sc/12 Microsoft\T1/lmr/m/n/12 : \T1/lmr/m/it/12 Vi-su-al Stu-dio Co
 -de hi-va-ta-los do-ku-men-tá-ció\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 696--697
+Underfull \hbox (badness 10000) in paragraph at lines 787--788
 []\T1/lmr/m/sc/12 Git\T1/lmr/m/n/12 : \T1/lmr/m/it/12 Hi-va-ta-los Git do-ku-me
 n-tá-ció\T1/lmr/m/n/12 , https://git-scm.com/docs (Le-töl-tés:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 702--703
+Underfull \hbox (badness 10000) in paragraph at lines 793--794
 []\T1/lmr/m/sc/12 Oracle\T1/lmr/m/n/12 : \T1/lmr/m/it/12 MySQL Con-nec-tor/Pyth
 on hi-va-ta-los do-ku-men-tá-ció\T1/lmr/m/n/12 ,
  []
@@ -939,67 +1015,61 @@ on hi-va-ta-los do-ku-men-tá-ció\T1/lmr/m/n/12 ,
 [30
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 717--718
+Underfull \hbox (badness 10000) in paragraph at lines 808--809
 []\T1/lmr/m/sc/12 Mockito\T1/lmr/m/n/12 : \T1/lmr/m/it/12 Hi-va-ta-los Mo-cki-t
 o do-ku-men-tá-ció és fel-hasz-ná-lói út-mu-ta-tó\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 1292) in paragraph at lines 720--721
+Underfull \hbox (badness 1292) in paragraph at lines 811--812
 []\T1/lmr/m/sc/12 ITU On-line\T1/lmr/m/n/12 : \T1/lmr/m/it/12 What Is Py-thon P
 y-game?\T1/lmr/m/n/12 , https://www.ituonline.com/tech-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 724--725
+Underfull \hbox (badness 10000) in paragraph at lines 815--816
 []\T1/lmr/m/sc/12 Dr. M. K. Jayant-hi Kan-nan\T1/lmr/m/n/12 : \T1/lmr/m/it/12 I
 nt-ro-duc-ti-on to Py-game
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 724--725
+Underfull \hbox (badness 10000) in paragraph at lines 815--816
 \T1/lmr/m/it/12 and Game De-ve-lop-ment us-ing Py-thon Py-game\T1/lmr/m/n/12 , 
 Re-se-arch-Ga-te,
  []
 
 
-Overfull \hbox (443.88033pt too wide) in paragraph at lines 724--725
-\T1/lmr/m/n/12 https://www.researchgate.net/publication/377064275_Introduction_
-to_Pygame_and_Game_Development_using_Python_Pygame_by_Dr_MK_Jayanthi_Kannan
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 727--728
+Underfull \hbox (badness 10000) in paragraph at lines 818--819
 []\T1/lmr/m/sc/12 Simple Di-rect-Me-dia Layer (SDL)\T1/lmr/m/n/12 : \T1/lmr/m/i
 t/12 Of-fi-ci-al SDL home-page\T1/lmr/m/n/12 ,
  []
 
-<Nyilatkozat.pdf, id=478, 598.235pt x 845.1575pt>
+<Nyilatkozat.pdf, id=502, 598.235pt x 845.1575pt>
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf>
-Package pdftex.def Info: Nyilatkozat.pdf  used on input line 731.
+Package pdftex.def Info: Nyilatkozat.pdf  used on input line 828.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
-<Nyilatkozat.pdf, id=480, page=1, 598.235pt x 845.1575pt>
+<Nyilatkozat.pdf, id=504, page=1, 598.235pt x 845.1575pt>
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 731.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 828.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 731.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 828.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 [31]
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 731.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 828.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 731.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 828.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 731.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 828.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
  [32
 
@@ -1009,16 +1079,16 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-14>
  ***********
 Package rerunfilecheck Info: File `EY52H0_2026.out' has not changed.
-(rerunfilecheck)             Checksum: F6E6E0FF8DEBE1CE15BD543A024B24B0;6554.
+(rerunfilecheck)             Checksum: 3AFFC56C9943F8CB97E78654C24DC77D;7299.
  ) 
 Here is how much of TeX's memory you used:
- 18148 strings out of 467537
- 293540 string characters out of 5423703
- 942345 words of memory out of 5000000
- 46639 multiletter control sequences out of 15000+600000
+ 18164 strings out of 467537
+ 293715 string characters out of 5423703
+ 942518 words of memory out of 5000000
+ 46647 multiletter control sequences out of 15000+600000
  704582 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,17n,93p,650b,1424s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,17n,93p,602b,1424s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025
 /texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/
 type1/public/lm/lmcsc10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/l
@@ -1026,10 +1096,10 @@ mr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2025/texmf-dist/fo
 nts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/
 lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on EY52H0_2026.pdf (32 pages, 386555 bytes).
+Output written on EY52H0_2026.pdf (32 pages, 392736 bytes).
 PDF statistics:
- 604 PDF objects out of 1000 (max. 8388607)
- 514 compressed objects within 6 object streams
- 134 named destinations out of 1000 (max. 500000)
- 358 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 630 PDF objects out of 1000 (max. 8388607)
+ 540 compressed objects within 6 object streams
+ 142 named destinations out of 1000 (max. 500000)
+ 390 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,10 +1,13 @@
 import json
 
+DB_AVAILABLE = True
+
 try:
     from dataBase import DatabaseManager
 except Exception as err:
     DatabaseManager = None
-    print(f"Adatbázis betöltés sikertelen: {err}")
+    DB_AVAILABLE = False
+    print(f"Adatbázis modul betöltése sikertelen: {err}")
 
 
 def _parse_database_value(value):
