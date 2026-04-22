@@ -614,12 +614,48 @@
 	
 	\chapter{Futtatás}
 	
-	A program futtatásához a következő lépések szükségesek:
-	\begin{itemize}
-		\item Python 3.10 telepítése és virtuális környezet létrehozása a projekt mappájában.
-		\item A szükséges csomagok telepítése a virtuális környezetbe a requirements.txt segítségével.
-		\item MySQL szerver futtatása a helyi gépen, és a database.txt tartalmának bemásolása sql lekérdezésbe.
-	\end{itemize}
+	A program Python 3.10 környezetben készült. A futtatáshoz MySQL szerverre, valamint a \texttt{pygame} és \texttt{mysql-connector-python} Python-csomagokra van szükség. A tesztek futtatásához a \texttt{pytest} csomag is szükséges.
+	
+	A programot a projekt gyökérkönyvtárából kell indítani, mivel az alkalmazás a képfájlokat relatív útvonalakon keresztül tölti be az \texttt{img/materials} és \texttt{img/tools} mappákból.
+	
+	\section{Környezet előkészítése (Windows PowerShell)}
+	
+	A virtuális környezet létrehozása és a függőségek telepítése az alábbi parancsokkal történik:
+	
+	\begin{verbatim}
+		cd szakdolgozat-main
+		python -m venv venv
+		.\venv\Scripts\Activate.ps1
+		python -m pip install pygame mysql-connector-python pytest
+	\end{verbatim}
+	
+	Amennyiben a projekt tartalmaz \texttt{requirements.txt} fájlt, a csomagok telepítése a következő paranccsal végezhető el:
+	
+	\begin{verbatim}
+		python -m pip install -r requirements.txt
+	\end{verbatim}
+	
+	\section{Adatbázis}
+	
+	A program alapértelmezés szerint a localhoston futó MySQL szerverhez kapcsolódik \texttt{root} felhasználóval, üres jelszóval, a \texttt{labor} nevű adatbázishoz. Ettől eltérő beállítás esetén a \texttt{src/dataBase.py} fájlban található kapcsolódási adatokat módosítani kell.
+	
+	Az adatbázis három fő táblát használ: \texttt{materials}, \texttt{tools} és \texttt{reactions}. A \texttt{materials} és \texttt{tools} táblák az alkalmazásban megjeleníthető anyagokat és eszközöket tartalmazzák, míg a \texttt{reactions} tábla az egyes reakciók bemeneti elemeit, eredményét és egyenletét tárolja.
+	
+	Az adatbázis inicializálásához a mellékelt \texttt{database.sql} fájl futtatása szükséges.
+	
+	\section{Program indítása}
+	
+	Az alkalmazás indítása:
+	
+	\begin{verbatim}
+		python src/main.py
+	\end{verbatim}
+	
+	Sikeres indítás után megjelenik a \textit{Labor} című Pygame ablak. Az alsó hotbarban az adatbázisból betöltött anyagok és eszközök jelennek meg. Az elemek a játéktérre húzhatók, kompatibilis anyagok esetén pedig új reakciótermék jön létre.
+	
+	\section{Hibaelhárítás}
+	
+	Ha a MySQL szerver nem fut, vagy a \texttt{labor} adatbázis nem érhető el, a program hibaüzenetet ír ki, és az adatbázisból betöltött listák üresek maradnak. Ebben az esetben ellenőrizni kell a MySQL szolgáltatás állapotát, az adatbázis nevét és a kapcsolódási adatokat.
 	
 	\chapter{Tesztelés}
 	
