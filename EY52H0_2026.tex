@@ -1,0 +1,733 @@
+\documentclass[]{thesis-ekf}
+\usepackage[T1]{fontenc}
+\PassOptionsToPackage{defaults=hu-min}{magyar.ldf}
+\usepackage[magyar]{babel}
+\usepackage{mathtools,amssymb,amsthm,pdfpages}
+\footnotestyle{rule=fourth}
+
+
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{media9}
+\usepackage{xcolor}
+\usepackage{listings}
+
+
+\begin{document}
+	
+	\institute{Matematikai és Informatikai Intézet}
+	\title{Python alapú grafikus alkalmazásfejlesztés}
+	\author{Mészáros Réka\\Programtervező informatikus BSc}
+	\supervisor{Kovács Ádám\\Tanársegéd}
+	\city{Eger}
+	\date{2026}
+	\maketitle
+	
+	\tableofcontents
+	\listoffigures 
+	
+	\lstdefinestyle{pythonstyle}{
+		language=Python, 
+		backgroundcolor=\color{gray!10},
+		keywordstyle=\bfseries\color{blue},
+		commentstyle=\itshape\color{green!50!black},
+		stringstyle=\color{red!60!black},
+		showstringspaces=false,
+		numbers=left,
+		numberstyle=\tiny\color{gray},
+		frame=single,
+		breaklines=true,
+		captionpos=b
+	}
+	
+	
+	\chapter{Bevezetés}
+	
+	A digitális oktatás fejlődése az elmúlt pár éveben egyre nagyobb hangsúlyt kapott, különösen az interaktív és vizuális tanulási módszerek alkalmazása terén. A hagyományos oktatási módszerek mellett egyre fontosabbá váltak azok a szoftveres megoldások, amelyek játékos módon támogatják a tanulók ismeretszerzését. Igaz ez a természettudományos tantárgyak esetében, ahol az elméleti tudást a vizuális megvalósítás is támogatja
+	
+	A kémia oktatásában a kísérletek és reakciók vizuális megfigyelése és kipróbálása kifejezetten fontos, hiszen ezek segítségével a tanulók könnyebben megérthetik az egyes anyagok tulajdonságait. Ugyanakkor az iskolai laboratóriumi környezet sok esetben korlátozott lehet. Akár az eszközök hiánya, a veszélyes anyagok használata, vagy az idő- és költségigény gyakran megnehezíti a gyakorlati oktatást.
+	
+	Általános iskolában illetve gimnáziumban a saját bőrömön is megismerhettem a labori környezetet amelyet főként csak a specifikus irányba továbbtanuló diákok használhattak többségben. Azonban ha kísérletezésre került sor az óra keretein belül, az jelentős felkészülést és időt vett el a tanórából. Ekkor értettem  meg igazán miért is az elméleti oktatásra fókuszálnak a pedagógusok. 
+	
+	Ezért is szakdolgozatom célja egy olyan oktatási célú játékalkalmazás létrehozása lett, amely virtuális laboratóriumi környezetben teszi lehetővé különböző kémiai reakciók szimulációját időtakarékosan. Az alkalmazás elsődleges célja, hogy támogassa a tanulók kémiai ismereteinek elmélyítését, valamint játékos formában segítse az összefüggések megértését. E mellett fontosnak tartottam azt is, a diákok akár maguk is próbálkozhassanak tanári segítség nélkül az órán tanult vegyületek készítésének tanulásával.
+	
+	Az programom lehetőséget biztosít különböző anyagok és eszközök kiválasztására, azok játékmezőn történő elhelyezésére, valamint az elemek közötti reakciók automatikus felismerésére. A vizuális megjelenítés és az interaktív használat elősegíti a tanulók memóriájának fejlesztését.
+	
+	Egyik fontos funkció a keresőrendszer, amely támogatja a felhasználót egy adott anyag vagy reakció létrehozásának folyamatában. Ez különösen hasznos lehet a tanulási folyamat során, mivel lépésről lépésre prezentálja a helyes megoldás sorrendjét.
+	
+	A dolgozat során bemutatom a fejlesztéshez használt technológiákat, a rendszertervet, az adatbázis felépítését, valamint az alkalmazás megvalósításának folyamatát. Emellett részletesen ismertetem a program működését, a főbb modulokat és azok kapcsolatát.
+	
+	A témaválasztásomat elsősorban az oktatás és az informatika összekapcsolásának lehetősége motiválta. Lelkes támogatóm volt édesanyám is az ötletben, akinek köszönhetem a szakmai tudását a kémiai reakciók iktatása során.
+	
+	Véleményem szerint a modern oktatásban egyre nagyobb szerepet kapnak a digitális eszközök, különösen azok az interaktív alkalmazások, amelyek képesek a tanulási folyamatot szemléletesebbé és élményszerűbbé tenni.
+	
+	A kémia tantárgy sajátossága, hogy az elméleti ismeretek mellett fontos szerepet kap a gyakorlati megvalósítás, mivel a tudat alatti befogadóképessége számos embernél jobb, hogyha nem csak papíron lát egy adott reakciót, hanem saját kezűleg is képes megtapasztalni. A laboratóriumi kísérletek segítik a tanulókat abban, hogy jobban megértsék az anyagok tulajdonságait, valamint a különböző reakciók sorrendjét. Ugyanakkor a valós laboratóriumi környezet használata sok esetben korlátozott, mivel speciális eszközöket, anyagokat és biztonságos körülményeket igényel.
+	
+	Másrészt azért tartottam különösen fontosnak, mert egy virtuális laboratóriumi környezet lehetőséget biztosít arra, hogy a tanulók veszélytelen, könnyen hozzáférhető és költséghatékony módon gyakorolhassák a kémiai reakciókat. Ezen kívül a játékos megközelítés motiváló hatással lehet a diákokra, különösen a fiatalabb korosztály számára.
+	
+	\chapter{Technológiai áttekintés} 
+	\section{Programozási nyelvek}
+	
+	\subsection{Python}
+	
+	A Python\cite{Python} egy magas szintű objektumorientált programozási nyelv, amelyet Guido van Rossum fejlesztett ki az 1980-as évek végén. A fejlesztést az ABC programozási nyelv utódjaként kezdte meg. Első megjelenése 1991-ben történt. Előtérbe helyezi a kód olvashatóságát, egyszerűségét és a vele való munka megkönnyítését. Szintaxisa letisztult, könnyen érthető.
+	A Python név Monty Python-ról született meg, ugyanis Guido van Rossum egyik kedvenc humoristája volt.
+	
+	Manapság főként mesterséges intelligenciához, gépi tanuláshoz, játékfejlesztéshez használják
+	
+	Egyetemi éveim alatt több programozási nyelvel is megismerkedtem, ilyenek például a C++\cite{C++}, C-Sharp\cite{C-Sharp} vagy Java\cite{Java}, azonban fő programozási nyelvként a Python-t választottam, amellyel pályafutásomat kezdtem már gimnáziumban. 
+	
+	\textbf{Python előnyei:}
+	\begin{itemize}
+		\item \textbf{Egyszerű szintaxis:} A Python kódja könnyen olvasható és érthető, ami megkönnyíti a vele való munkát.
+		\item \textbf{Gyors fejlesztés:} A dinamikus típusrendszer lehetővé teszi, hogy a változók típusait nem szükséges előre deklarálni.
+		\item \textbf{Tágas könyvtárkészlet:} A Python közösségben számos könyvtár elérhető a különféle szükségekhez.
+		\item \textbf{Keresztplatformosság:} A Python programok Windows, Linux és macOS rendszereken azonos módon futtathatóak.
+		\item \textbf{Oktatási célokra alkalmas:} A Python széles körben használt oktatási nyelvként, amely ezáltal ideális egy hasonló célú alkalmazáshoz.
+	\end{itemize}
+	
+	\textbf{Korlátai}
+	\begin{itemize}
+		\item \textbf{Teljesítmény:} A Python lassabb, mint a fordított nyelvek (C++, Java), de az oktatási alkalmazásokhoz elegendő.
+		\item \textbf{Memória-felhasználás:} a runtime nagyobb memóriát igényel, mint az alacsonyabb szintű nyelvek.
+		\item \textbf{Telepítési követelmények:} Szükséges a Python futtatókörnyezet telepítése.
+	\end{itemize}
+	
+	\subsection{SQL}
+	
+	A Structured Query Language (röviden SQL\cite{SQL}) az 1970-es években, IBM által elkezdett adatbázis kezelésre fejlesztett nyelv. Főbb lehetőségei a lekérdezés, módosítás, törlés illetve adatbázis létrehozása és kezelése.
+	
+	Szakdolgozatom során a már egyetemen megismert MySQL-el dolgoztam, amely lehetővé tette a gyors és egyszerű adatbázis létrehozást.
+	
+	\section{GitHub}
+	
+	A GitHub\cite{GitHub} egy webalapú platform, szolgáltatás mely a Git\cite{Git} verziókezelő rendszerre épül. Fontos szerepet játszik a kód online tárolásában és elérhetőségében. Lehetőséget ad több fejlesztő együttműködésére és a kód verziókezelésére.
+	
+	A fejlesztést lokálisan végeztem, ezáltal a Git számomra az a kód elérhetősége és letölthetősége során vált fontossá.
+	\textbf{A Git lehetővé teszi:}
+	\begin{itemize}
+		\item A kód változásainak követését (commit history).
+		\item Az előző verziókhoz való visszatérést (checkout).
+		\item Helyi backup-okat és az adatvédelemben if fontos szerep lát el.
+	\end{itemize}
+	
+	A projekt elérhetővé tételéhez a GitHub platformot alkalmaztam, amellyel lehetőve vált:
+	\begin{itemize}
+		\item \textbf{Nyílt forráskód:} Az alkalmazás forráskódja publikusan elérhető a GitHub repository-ban, amely megkönnyíti az oktatási célú felhasználást.
+		\item \textbf{Dokumentáció:} Minden fontos információ, például telepítési útmutató, megtalálható.
+		\item \textbf{Hozzáférhetőség:} A tanárok és diákok bármikor letölthetik és futtathatják az alkalmazást saját gépükön.
+		\item \textbf{Közösségi visszajelzés:} Az Issues funkcióval felhasználók jelezhetik a hibákat vagy javaslatokat tehetnek a program bővítésére.
+	\end{itemize}
+	
+	\section{Fejlesztői környezetek}
+	\subsection{PyCharm}
+	
+	A projekt megvalósítása során elsődleges fejlesztői környezetként a \textbf{PyCharm}\cite{PyCharm} integrált fejlesztői környezetet (IDE) alkalmaztam, amelyet a JetBrains fejlesztett kifejezetten Python alapú projektekhez. A választás egyik fő oka ismét gimnáziumi éveimbe nyúlik vissza, ahol megismertem a fejlesztőkörnyezetet és megszerettem.
+	
+	A PyCharm számos olyan funkciót biztosít, amely jelentősen megkönnyítette a fejlesztési folyamatot. Ezek közé tartozik a szintaxiskiemelés, a hibák valós idejű jelzése, valamint a refaktorálási lehetőségek. Ezek az eszközök hozzájárultak a kód olvashatóságának javításához és a hibák számának csökkentéséhez.
+	
+	A grafikus alkalmazás fejlesztése szempontjából külön előnyt jelentett, hogy a PyCharm jól támogatta a PyGame\cite{PyGame} könyvtár használatát, valamint megkönnyítette a moduláris projektstruktúra kezelését.
+	
+	\subsection{Visual Studio Code}
+	
+	A Visual Studio Code (röviden VS Code) egy a Microsoft által létrehozott ingyenes és nyílt forráskódú kód-szerkesztő. Első verziója 2015-ben jelent még, azóta egyik legismertebb fejlesztői eszközzé vált.
+	
+	Számomra legfőbb előnye széles körű bővítményválasztéka. Fontos tulajdonsága az is, hogy több, különböző fájlt is képes kezelni, ilyenek például a .tex, .py, .txt.
+	
+	Integrálja a Git verziókezelést, azáltal támogatva a projektek fejlesztését.
+	
+	Ahogyan a Python, a VS Code is támogatja a crossplatformot, használható Windows, Linux és macOs rendszereken is.
+	
+	\subsection{PhPMyAdmin}
+	
+	A phpMyAdmin\cite{phpMyAdmin} egy ingyenes, webalapú adatbázis-kezelő eszköz, amelyet PHP nyelven fejlesztettek ki. Elsősorban a MySQL adatbázisok grafikus kezelésére szolgál.
+	
+	Grafikus megjelenése miatt elősegíti az adatbázisok vizuális megjelenését és azok módosításait. Nem szükséges SQL alaptudás hozzá, manuálisan is kezelhető.
+	
+	Böngészőben futtatható felület, amely a háttérben egy MySQL szerverként dolgozik, XAMPP\cite{Apache} rendszerekben elterjedt.
+	
+	\subsection{Elérhetőségi linkek}
+	
+	A projekt elérhetőségét az alábbi helyen biztosítom:
+	
+	GitHub repository: \url{https://github.com/MRekaa/EY52H0_Szakdolgozat} 
+	
+	\section{Használt csomagok} 
+	
+	\subsection{Pygame könyvtár}
+	
+	A grafikus megjelenítés és a felhasználói interakciók megvalósításához a Pygame\cite{PyGame2} könyvtárat használtam.A Pygame egy Python alapú, nyílt forráskódú fejlesztői könyvtár, amelyet főként 2D-s játékok és grafikus alkalmazások készítésére használnak.
+	
+	A könyvtár a \textit{Simple DirectMedia Layer (SDL)}\cite{SDL} multimédiás keretrendszerre épül, amely stabil alapot biztosít a grafikai megjelenítéshez, az eseménykezeléshez, valamint a hang- és képfeldolgozáshoz. Ennek köszönhetően a Pygame széles körben alkalmazható interaktív alkalmazások fejlesztésére.
+	
+	A szakdolgozat fejlesztése során a Pygame megfelelő választásnak bizonyult, mivel lehetővé tette a 2D-s játékmező egyszerű és hatékony megvalósítását, az objektumok megjelenítését, a sprite-ok megjelenítését valamint a drag-and-drop jellegű felhasználói interakciók kezelését.
+	
+	
+	\textbf{PyGame tulajdonságai}
+	\begin{itemize}
+		\item \textbf{Keresztplatformosság:} A Pygame támogatja a Windows, Linux és macOS operációs rendszereket, így az alkalmazás különböző környezetekben is futtatható.
+		
+		\item \textbf{Széles körű támogatás:} Nagy fejlesztői közösséggel rendelkezik, ezért számos dokumentáció, útmutató és oktatóanyag érhető el hozzá.
+		ez.
+		
+		\item \textbf{Játékfejlesztési funkciók:} A Pygame támogatja a sprite-kezelést, ütközésvizsgálatot és eseménykezelést, amelyek elengedhetetlenek voltak a projekt megvalósításához.
+	\end{itemize}
+	
+	\subsection{MySQL-connector-python}
+	
+	Az adatbázis-kapcsolat kezeléséhez a mysql-connector-python\cite{Oracle} csomagot alkalmaztam. Ez egy Python nyelvhez készült hivatalos MySQL klienskönyvtár, amely lehetővé teszi a Python alkalmazás és a MySQL adatbázis közötti kommunikációt.
+	
+	A könyvtár segítségével a program képes kapcsolatot létesíteni az adatbázissal, SQL lekérdezéseket végrehajtani, valamint az ott tárolt adatokat feldolgozni. A projekt során ezt a csomagot használtam az anyagok, eszközök és kémiai reakciók adatainak lekérdezésére és betöltésére.
+	
+	A \texttt{mysql-connector-python} könyvtár előnye, hogy stabil és megbízható adatbázis-hozzáférést biztosít, valamint támogatja a hibakezelést is, például sikertelen kapcsolódás vagy hibás SQL lekérdezés esetén.
+	
+	A csomag használata lehetővé tette, hogy az alkalmazás adatvezérelt módon működjön, így az új anyagok és reakciók hozzáadása egyszerűen, az adatbázis bővítésével megvalósítható, a programkód  módosítása nélkül.
+	
+	A mysql-connector-python a projektre legmegfelelőbb választás, mivel közvetlenül és megbízhatóan csatlakozik a MySQL adatbázishoz.
+	
+	\chapter{Rendszerterv} 
+	\section{A rendszer célja}
+	
+	A Python alapú 2D-s rendszer a kémiai reakciók játékos tanulását támogatja, lehetővé téve a diákok számára a vizuális gyakorlást egy számítógépes labor környezetben. 
+	
+	A játék lehetőséget biztosít különböző anyagok és eszközök kombinálására, amelyek segítségével új vegyületek hozhatók létre. Ez a folyamat hozzájárul a tanulók memóriájának fejlesztéséhez, valamint az összefüggések könnyebb megértéséhez. Az anyagok vizuális megjelenítése továbbá elősegíti a tudat alatti, könnyebb és hatékonyabb tanulási folyamatot.
+	\section{Követelmények listája} 
+	\subsection{Funkcionális követelmények}
+	\begin{itemize}
+		\item Felhasználó kiválaszthat anyagokat és eszközöket a hotbar-ból.
+		\item A hotbarban az eszközök és elemek külön választva helyezkednek el, amelyek között válthat a felhasználó.
+		\item Itemeket helyezhet a játékmezőre drag-and-drop módon.
+		\item Automatikus reakciók indulnak, ha két item megfelelő távolságon belül van.
+		\item Ha két item nem képes reakcióra nem történik változás.
+		\item Keresőrendszer biztosítja a lehetséges reakciók megtalálását.
+		\item Itemek törölhetők a trash zónába helyezéssel.
+		\item Reszponzív felület, amely alkalmazkodik az ablakméret változásához.
+	\end{itemize}
+	\subsection{Nem funkcionális követelmények}
+	\begin{itemize}
+		\item Adatbázis alapú reakciók tárolása MySQL-ben.
+		\item Egyszerű, intuitív felhasználói felület Pygame-el megvalósítva.
+		\item Hatékony teljesítmény kis erőforrásigénnyel.
+		\item Könnyen bővíthető adatbázis.
+	\end{itemize}
+	\section{Használati esetek (Use case-ek)}
+	\begin{itemize}
+		\item \textbf{Item spawnozása:} A felhasználó kiválaszt egy anyagot vagy eszközt a hotbar-ból, és a játékmezőre helyezi.
+		\item \textbf{Reakció kiváltása:} Két item közel helyezésekor automatikusan létrejön az új anyag, ha van megfelelő reakció.
+		\item \textbf{Recept keresése:} A felhasználó beírja a keresett anyag nevét, és megjelennek a lehetséges kombinációk.
+		\item \textbf{Item törlése:} Az itemet a trash zónába húzva eltávolítja a játékból.
+	\end{itemize}
+	\section{Adatbázis-terv}
+	
+	Az adatbázis MySQL alapú, és legalább harmadik normálformában (3NF) van tervezve. A fő táblák:
+	\begin{itemize}
+		\item  Tárolja a reakciókat (item1, item2, result, equation, type). Az item1 és item2 kombinációja hozza létre a result, eredmény anyagot. Az equation tárolja a kémiai reakció egyenletét, a type adja meg a result típusát.
+		\item  Az elérhető anyagok listája (name).
+		\item  Az elérhető eszközök listája (name).
+	\end{itemize}
+	\section{UML-diagramok, folyamatábrák}
+	\subsection{Osztálydiagram}
+	
+	\textbf{Fő osztályok:}
+	\begin{itemize}
+		\item Main (fő vezérlő)
+		\item ItemOnBoard (itemek a játékmezőn)
+		\item Reaction (reakciók kezelése)
+		\item Hotbar (elérhető anyagok, tárgyak)
+		\item SearchSystem (keresési lehetőség)
+		\item Trash (itemek törlése)
+	\end{itemize}
+	Az ItemOnBoard kapcsolatban áll a Reaction-nal, a Hotbar-ok öröklik a Hotbar osztályt.
+	\subsection{Folyamatábra}
+	
+	A játék fő ciklusa: Eseménykezelés (egérkattintás, mozgatás), itemek frissítése, reakciók ellenőrzése, renderelés.
+	
+	\chapter{Saját szoftver megvalósítása} 
+	\section{Az alkalmazás felépítése}
+	
+	\subsection{Architekturális áttekintés}
+	
+	Az alkalmazás moduláris felépítésű, MVC-szerű (Model-View-Controller) architektúrával épül fel. Ez a megközelítés elválasztja az adatkezelést (Model), a felhasználói felületet (View), valamint az üzleti logikát (Controller), ezáltal biztosítva a kód szervezettségét, módosíthatóságát és karbantarthatóságát.
+	
+	A rendszer három fő rétegből áll:
+	\begin{enumerate}
+		\item \textbf{Adatkezelési réteg (Data Layer):} Az adatbázissal való kommunikációt és az adatok betöltését kezeli. Ez a réteg a MySQL adatbázissal kapcsolódik a \texttt{mysql-connector-python} könyvtáron keresztül.
+		\item \textbf{Üzleti logikai réteg (Business Logic Layer):} Az alkalmazás magját képezi, ide tartozik a játéklogika, a kémiai reakciók ellenőrzése, az objektumok közötti interakciók kezelése.
+		\item \textbf{Prezentációs réteg (Presentation Layer):} A Pygame keretrendszer felhasználásával valósul meg, kezeli a grafikus megjelenítést, a felhasználói interakciókat és a vizuális visszajelzéseket.
+	\end{enumerate}
+	
+	\subsection{Komponensek és azok szerepe}
+	
+	Az alkalmazás fő komponensei az alábbiak:
+	
+	\subsubsection{Main osztály (main.py)}
+	
+	Az alkalmazás belépési pontja és fő vezérlője. Ez a komponens koordinálja a játékciklust (game loop). A Main osztály felelős az alábbiak kezeléséért:
+	\begin{itemize}
+		\item A Pygame inicializálása és az ablak létrehozása
+		\item Az összes többi komponens inicializálása (Hotbar, Reaction, SearchSystem, Trash)
+		\item Az eseménykezelés: egérkattintások, egérmozgás, ablak átméretezés, billentyűlenyomások
+		\item A játékciklus logikájának menedzselése (input feldolgozás, update, render)
+		\item Az alkalmazás leállításának kezelése
+	\end{itemize}
+	
+	A Main osztály szinkronizálja az összes többi modul működését, biztosítva, hogy minden komponens szinkronban legyen a játékciklus ritmusával.
+	
+	\subsubsection{ItemOnBoard osztály (itemOnBoard.py)}
+	
+	Az a játékmezőn jelenlévő objektumokat (anyagok és eszközök) reprezentálja. Ez az osztály a Model komponensként funkcionál az MVC architektúrában. Fő feladata:
+	\begin{itemize}
+		\item Az egyes itemek adatainak tárolása: pozíció, típus (anyag/eszköz), méret, kép
+		\item Az items pozíciójának frissítése drag-and-drop műveletek során
+		\item Az items megjelenítésének koordinálása a Pygame-gal
+		\item Ütközésdetekció: annak meghatározása, hogy mely itemek kombinálódnak\cite{Kombination}
+		\item Az objektumok közötti lehetséges reakciópárok azonosítása
+	\end{itemize}
+	Az ItemOnBoard osztály közvetlenül kommunikál a Reaction modullal az ütközésdetekció eredményeit átadva, és a View réteg felé a Pygame-on keresztül a megjelenítéshez szükséges adatokat nyújtja.
+	
+	\subsubsection{Reaction osztály (reaction.py)}
+	
+	Az üzleti logika egyik központi komponense, amely a kémiai reakciók magját képezi. Főbb felelősségei:
+	\begin{itemize}
+		\item Az ItemOnBoard-tól érkező távolságadatok alapján annak ellenőrzése, hogy mely objektumok között lehetséges reakció
+		\item Az adatbázisban tárolt reakcióadatok lekérdezése a \texttt{config.py}-n keresztül
+		\item A megfelelő feltételek teljesülése esetén az új anyagok létrehozása
+		\item A reakció során az eredeti objektumok eltávolítása és az új objektum hozzáadása
+	\end{itemize}
+	A Reaction osztály az ItemOnBoard-dal szoros kapcsolatban áll, mivel az ItemOnBoard az új anyagokat adja hozzá a játékhoz a reakció után. Ez a komponens az üzleti logika magját reprezentálja, amely a kémiai ismereteket implementálja.
+	
+	\subsubsection{Hotbar komponensek (HB/ mappa)}
+	
+	A felhasználói felület eszköztárát valósítja meg, ahol a felhasználók kiválaszthatják az elérhető anyagokat és eszközöket. A két lehetőséget a \ref{fig:hotbarM}. és \ref{fig:hotbarT}. ábra mutatja be. A modulok struktúrája:
+	\begin{itemize}
+		\item \textbf{hotbar.py}: Az alap hotbar funkciót biztosítja, kezeli az eszköztár pozícióját, méretét és a reszponzivitást az ablakméret-változásokra.
+		\item \textbf{materialsH.py}: Az elérhető anyagok listáját jeleníti meg egy léptethető sávban, az adatbázisból betöltött adatok alapján.
+		\item \textbf{hotbar.py}: Az elérhető eszközöket jeleníti meg hasonló módon.
+	\end{itemize}
+	Ezek a komponensek kommunikálnak a \texttt{config.py}-vel az adatok lekérdezéséhez, és az ItemOnBoard-dal az új objektumok létrehozásához, amikor a felhasználó kiválaszt egy anyagot vagy eszközt.\\
+	
+	\begin{figure}[h]
+		\centering
+		
+		\begin{minipage}{0.7\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{hotbarM.png}
+			\caption{Hotbar materials}
+			\label{fig:hotbarM}
+		\end{minipage}
+		
+		\begin{minipage}{0.7\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{hotbarT.png}
+			\caption{Hotbar tools}
+			\label{fig:hotbarT}
+		\end{minipage}
+		
+	\end{figure}
+		
+	\subsubsection{Trash komponens (trash.py)}
+	
+	Az objektumok törlésének funkcionáltatásáért felelős  trash osztály. Alapvető feladatai közé tartozik a törlési zóna megjelenítése és pozícionálása az ablak egy rögzített helyén (jobb felső sarkokban).
+	Az egérmozgás figyelése és annak detektálása, hogy mely objektumok vannak a törlési zónában
+	Visual feedbacket ad, a kuka sprite-jának frissítésével ha egy adott item a zónába kerül.
+	A változást a \ref{fig:trashClosed}. illetve \ref{fig:trashOpen}. ábra szemlélteti.
+	
+	Ez a komponens szoros kapcsolatban áll az ItemOnBoard-dal, mivel a kuka sprite zónájába kerülő objektumok eltávolításra kerülnek az ItemOnBoard listájából, ezáltal törölve lesznek a játékfelületről is.
+	
+	\begin{figure}[h]
+		\centering
+		
+		\begin{minipage}{0.4\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{trashClosed.png}
+			\caption{Kuka lezárva}
+			\label{fig:trashClosed}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{trashOpen.png}
+			\caption{Kuka nyitva aktív item-mel a közelében}
+			\label{fig:trashOpen}
+		\end{minipage}
+		
+	\end{figure}
+	
+	
+	\subsubsection{SearchSystem modul (searchSystem.py)}
+	
+	A keresőrendszert implementálja, amely segíti a célzott anyagok előállításában. Funkciói:
+	\begin{itemize}
+		\item A felhasználó által megadott anyag nevéből indulva az adatbázisban történő keresés
+		\item A lehetséges receptek megjelenítése, amelyek az adott anyaghoz vezetnek
+	\end{itemize}
+	
+	\subsubsection{Config modul (config.py)}
+	
+	Fontos szerepet kap az adatbázis összeköttetés során:
+	\begin{itemize}
+		\item Az alkalmazás indításakor betölti az összes adatbázis-adatot (anyagok, eszközök, reakciók)
+		\item Egy globális adatstruktúrát hoz létre az alkalmazás memóriájában, amely gyors hozzáférést biztosít
+		\item Az adatbázis-hibák kezelése (MySQL szerverhez való kapcsolódás sikertelen)
+		\item Az adatok frissítésének és szinkronizálásának kezelése
+	\end{itemize}
+	
+	\subsubsection{Tool/materials osztály (tool.py/materials.py)}
+	
+	Az objektumokat definiáló osztályok. A \ref{fig:tools}. ábra a tools osztályt mutatja be.
+	
+	\lstinputlisting[style=pythonstyle,caption=Tool osztály,label=fig:tools]{tool.py}
+	
+	\subsubsection{Settings modul (settings.py)}
+	
+	Az alkalmazás beállításait és konstansait tárja:
+	\begin{itemize}
+		\item Grafikai beállítások: színek, betűtípusok, margók
+		\item Az ablak alapmérete és reszponzivitási szabályai
+		\item Konstans értékek: fizikai paraméterek 
+		\item A reszponzívitás kiszámításának formulái
+	\end{itemize}
+	Ez a modul az alkalmazás egészében használt globális konfigurációs adatokat tartalmaz.
+	
+	\subsection{Adatfolyam és működési logika}
+	
+	Az alkalmazás működése az alábbi sorrend szerint történik:
+	
+	\begin{enumerate}
+		\item Az alkalmazás indításakor a \texttt{config.py} modul betölti az adatbázisból az összes rendelkezésre álló anyagot, eszközt és kémiai reakciót.
+		\item A \texttt{main.py} inicializálja a Pygame-ot és elindítja a fő játékciklust.
+		\item Minden frame-ben a rendszer feldolgozza az felhasználói eseményeket: egér eseményeket, mozgásokat és drag-and-drop operációkat.
+		\item Az ItemOnBoard komponens frissíti az objektumok pozícióit a felhasználói inputok alapján.
+		\item A Reaction modul folyamatosan ellenőrzi az objektumok közötti távolságot, és ha az előfeltételek teljesülnek, reakciókat indít el.
+		\item A Pygame végül rendereli a frissített állapotot a képernyőre.
+		\item Az Trash és SearchSystem modulok szükség szerint végzik el kiegészítő funkcióikat.
+	\end{enumerate}
+	
+	
+	\subsubsection{Pygame keretrendszer integrációja}
+	
+	A Pygame egy Python alapú grafikus könyvtár, amely SDL (Simple DirectMedia Layer) fölött működik. Az alkalmazásban a Pygame a következő feladatokat végzi:
+	
+	\begin{itemize}
+		\item \textbf{Ablak és megjelenítés:} A Pygame kezeli az alkalmazás ablakát, a felbontást és az átméretezést. Az \texttt{pygame.display} modul kezelő feladata az ablakhoz való rajzolás és az image renderelés.
+		
+		\item \textbf{Eseménykezelés:} A Pygame az \texttt{pygame.event} modulon keresztül kezeli az összes felhasználói inputot:
+		\begin{itemize}
+			\item Egérkattintások (\texttt{MOUSEBUTTONDOWN}, \texttt{MOUSEBUTTONUP})
+			\item Egérmozgás (\texttt{MOUSEMOTION})
+			\item Ablakátméretezés (\texttt{VIDEORESIZE})
+			\item Billentyűlenyomások (\texttt{KEYDOWN}, \texttt{KEYUP})
+		\end{itemize}
+		
+		\item \textbf{Grafikus elemek és spritok:} A Pygame a \texttt{pygame.sprite} osztályokkal kezeli az objektumokat. Az alkalmazásban az ItemOnBoard osztályok Pygame spriteok-ból örökölnek, amely megkönnyíti az kombinációkat és a megjelenítést.
+		
+	\end{itemize}
+	
+	\subsubsection{Adatbázis-kezelés és MySQL integrációja}
+	
+	Az alkalmazás MySQL adatbázist használ. Az integráció:
+	
+	\begin{itemize}
+		\item \textbf{mysql-connector-python csomag:} Ez a csomag a MySQL szerver és a Python alkalmazás közötti kommunikációt kezelik. Az \texttt{dataBase.py} modul az alábbi műveleteket végzi:
+		\begin{itemize}
+			\item Kapcsolódás a MySQL szerverhez felhasználónév és jelszó alapján
+			\item SQL lekérdezések végrehajtása: SELECT, INSERT, UPDATE, DELETE
+			\item Hibakezelés: kapcsolódási hibák, lekérdezési hibák, adatkonverziós hibák
+		\end{itemize}
+		
+		
+		\item \textbf{Adatbetöltési stratégia:} Az alkalmazás indításakor a \texttt{config.py} modul az összes adatbázis-adatot betölti az alkalmazás memóriájába. Ez a megközelítés:
+		\begin{itemize}
+			\item Előnye: Gyors adathozzáférés futás közben, mivel az adatok a memóriában vannak
+			\item Hátránya: Az alkalmazás memória-igénye növekszik, és az adatbázis módosítása szükséges az alkalmazás újraindításához
+		\end{itemize}
+	\end{itemize}
+	
+	\subsubsection{Komponensek közötti kommunikáció}
+	
+	Az alkalmazás komponensei így kommunikálnak:
+	
+	\begin{itemize}
+		\item \textbf{Main → Config:} Az alkalmazás indításakor a Main osztály meghívja a Config modult az adatok betöltéséhez.
+		
+		\item \textbf{Main → ItemOnBoard:} A Main osztály kezeli az egéresemények feldolgozását és továbbítja azokat az ItemOnBoard osztálynak.
+		
+		\item \textbf{ItemOnBoard → Reaction:} Az ItemOnBoard objektumokat hoznak létre és nyomon követik, majd az kombinációk után átadja az információkat a Reaction modulnak.
+		
+		\item \textbf{Reaction → Config:} A Reaction modul lekérdezi a lehetséges recepteket a Config modulból.
+		
+		\item \textbf{Hotbar → ItemOnBoard:} A felhasználó által kiválasztott anyagok alapján az ItemOnBoard új objektumokat hoz létre.
+		
+		\item \textbf{Trash → ItemOnBoard:} Az objektumok törlésének műveletét az ItemOnBoard listájából hajtja végre.
+	\end{itemize}
+	
+	
+	\subsubsection{Hibatűrés és hibakezelés}
+	
+	Az alkalmazás hibalehetőségeit biztosítják:
+	
+	\begin{itemize}
+		\item \textbf{Adatbázis-hiba kezelés:} Ha a MySQL szerver nem érhető el az indítás során, a \texttt{dataBase.py} hibaüzenetet jelenít meg, és az alkalmazás üres listákkal próbál továbblépni.
+		
+		\item \textbf{Képbetöltési hibák:} Ha egy kép nem található, a Pygame egy alapértelmezett nem a képet jeleníti meg, hanem az item nevét.
+		
+		\item \textbf{Ablak-átméretezési hibaelkerülés:} A Settings modul biztosítja, hogy az ablak átméretezésekor az összes komponens a helyes pozícióban maradjon.
+	\end{itemize}
+	
+	\subsubsection{Bővíthetőség és fenntarthatóság}
+	Az alkalmazás moduláris szerkezete lehetővé teszi az egyszerű bővítést:
+	
+	\begin{itemize}
+		\item \textbf{Új anyagok,reakciók hozzáadása:} Az adatbázisban egy új sor felvétele bármely táblában elegendő az új itemek, reakciók integrálásához.
+		
+		\item \textbf{Új funkciók:} Az új modulok egyszerűen hozzáadhatók a meglévő szerkezethez.
+	\end{itemize}
+	
+	\section{Adatbázis}
+	\subsubsection{Kapcsolatteremtés az adatbázissal}
+	
+	A backend az alkalmazás szerveroldali logikájáért és az adatok kezeléséért felel. A rendszer az adatbázis-műveletekhez MySQL adatbázist használ, amelyhez a kapcsolat a \texttt{mysql-connector-python} könyvtár segítségével valósul meg.
+	
+	Az adatkezelési réteg két fő modulra oszlik. A \texttt{config.py} modul felel az alkalmazás indulásakor szükséges alapadatok betöltéséért, ilyenek a reakciók és az itemek adatbázisból történő lekérdezését. Ez biztosítja, hogy a játék logikája dinamikusan, az adatbázis tartalmára alapozva működjön.
+	
+	A \texttt{database.py} (dataBase.py) modul látja el az adatbázis-hozzáférési réteg szerepét, amely tartalmazza az SQL lekérdezések végrehajtását, valamint az adatok kiolvasását. Ez a réteg elválasztja az adatbázis-kezelési logikát az alkalmazás többi részétől, ezáltal növelve a rendszer modularitását és karbantarthatóságát.
+	
+	Az adatbázis felépítése lehetővé teszi a játékban használt adatok könnyű bővíthetőségét, mivel az új itemek és reakciók közvetlenül az adatbázis módosításával integrálhatók, a programkód megváltoztatása nélkül.
+	
+	A backend felelős a játéklogika futtatásáért, beleértve a reakciók ellenőrzését és az objektumok közötti interakciók kezelését. A rendszer folyamatosan figyeli a játékterületen lévő elemek közötti távolságot, és meghatározott feltételek teljesülése esetén reakciókat indít el.
+	
+	A háttérfolyamatok eseményvezérelt módon működnek, amelyet a PyGame fő ciklusa (game loop) hajt végre. Ez biztosítja, hogy a játék állapota minden frame-ben frissüljön, miközben az adatkezelés és a logikai műveletek elkülönítve, mégis szinkronban történnek.
+	\subsubsection{Adatbázis-struktúra:}
+	
+	Az alkalmazás három táblát használ, amelyeket a \ref{fig:database}. ábra prezentál egy dbdiagrammal\cite{dbDiagram}:
+	\begin{itemize}
+		\item \textbf{reactions:} A kémiai reakciókat definiálja (item1,item2,result,equation,type). Item1 és item2 mező a reakcióhoz használt bemeneti elemeket tárolja, amelyekkel létrejön egy adott típusú eredmény(result). A folyamat képletét az equation tárolja el.
+		\item \textbf{tools:} Az eszközök nevét tartalmazza. 
+		\item \textbf{materials tábla:} A kémiai anyagok nevét tárolja.
+		
+	\end{itemize}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{dataBaseStructure.png}
+		\caption{Adatbázis felépítése}
+		\label{fig:database}
+	\end{figure}
+	Az adatbázis kapcsolatokat nem tartalmaz, mivel a további feldolgozást a program végzi.
+	
+	
+	\section{Frontend}
+	
+	A frontend megvalósítása a PyGame könyvtár felhasználásával történt, amely egy Python alapú, 2D grafikus alkalmazások fejlesztésére alkalmas keretrendszer. A rendszer főbb feladatai közé tartozik a felhasználói interakciók kezelése, a grafikus elemek megjelenítése, valamint a játéklogika vizuális visszacsatolásának biztosítása.
+	
+	Az alkalmazás támogatja a drag-and-drop mechanizmust, amely lehetővé teszi az objektumok interaktív mozgatását a játéktéren belül. Emellett a felület reszponzív kialakítással rendelkezik, amely biztosítja, hogy az ablakméret változásakor a grafikus komponensek elrendezése és méretezése dinamikusan alkalmazkodjon az aktuális képernyőmérethez.
+	
+	A reszponzív működés alapját egy központi layout-számítási mechanizmus képezi, amely az aktuális ablakméretből (szélesség és magasság) származtatja a felhasználói felület fő elemeinek, például a játéktérnek és a hotbar komponenseknek méreteit. Az átméretezési események kezelése során a rendszer újraszámolja a vizuális elemek pozícióit, így biztosítva az arányos megjelenítést különböző felbontások esetén is.
+	
+	A vizuális visszajelzések között tooltip-ek, valamint reakcióláncok (history chain) megjelenítése szerepel, amelyek segítik a felhasználót a játékbeli interakciók követésében és értelmezésében.
+	
+	\subsubsection{Képek}
+	
+	A játékban használt grafikai elemeket a Piskel\cite{Piskel} online szerkesztő segítségével készültek. Az sprite-ok PNG formátumú, átlátszó hátterű képek, amelyek könnyedén felhasználhatóak a PyGame segítségével.
+	
+	Ilyen sprite a \ref{fig:Pipetta}. ábrán látható pipetta eszköz is amely víz felvétele után a \ref{fig:Pipetta(H2O)}. ábra látható már anyagként.
+	
+	\begin{figure}[h]
+		\centering
+		
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{img/tools/Pipetta.png}
+			\caption{Pipetta sprite}
+			\label{fig:Pipetta}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{img/materials/Pipetta(H2O).png}
+			\caption{Pipetta(H2O) sprite}
+			\label{fig:Pipetta(H2O)}
+		\end{minipage}
+		
+	\end{figure}
+	
+	\chapter{Futtatás}
+	
+	A program futtatásához a következő lépések szükségesek:
+	\begin{itemize}
+		\item Python 3.10 telepítése és virtuális környezet létrehozása a projekt mappájában.
+		\item A szükséges csomagok telepítése a virtuális környezetbe: \texttt{pygame} és \texttt{mysql-connector-python}.
+		\item MySQL szerver futtatása a helyi gépen, és a \texttt{labor} nevű adatbázis létrehozása.
+		\item Az adatbázishoz tartozó táblák: \texttt{reactions}, \texttt{materials}, \texttt{}.
+		\item A \texttt{src/config.py} modul beolvassa az adatokat az adatbázisból, így a táblák helyes struktúrája és tartalma szükséges a program működéséhez.
+		\item Ha a \texttt{mysql-connector-python} csomag hiányzik, vagy a MySQL nem elérhető, a \texttt{src/dataBase.py} hibaüzenetet ad, és a betöltés üres lista lesz.
+	\end{itemize}
+	
+	Az alkalmazás indítása előtt aktiválni kell a virtuális környezetet, majd a fő scriptet kell futtatni:
+	\begin{itemize}
+		\item PowerShell-ben a környezet aktiválása: \texttt{.\textbackslash venv\textbackslash Scripts\textbackslash Activate.ps1}
+		\item A játék elindítása: \texttt{.\textbackslash venv\textbackslash Scripts\textbackslash python.exe src/main.py}
+		\item Ha a virtuális környezet már aktív, elég közvetlenül futtatni: \texttt{python src/main.py}
+	\end{itemize}
+	
+	Ha nincs \texttt{requirements.txt}, akkor a csomagokat kézzel kell telepíteni a fent említett módon.
+	
+	\chapter{Tesztelés}
+	
+	\section{Manuális tesztelés}
+	\begin{table}[ht!]
+		\centering
+		\footnotesize
+		\begin{tabular}{|>{\centering}m{4.5cm}|>{\centering}m{3cm}|>{\centering\arraybackslash}m{7cm}|}
+			\hline
+			\textbf{Funkció} & \textbf{Leírás} & \textbf{Opciók/Példák} \\
+			\hline
+			Hotbar váltás & Sikeres & Gombok megfelelően váltanak hotbar-t \\
+			\hline
+			Material helyezése a játékfelületre & Sikeres & A material megjelent a a játékfelületen \\
+			\hline
+			Tool helyezése a játékfelületre & Sikeres & A tool megjelent a a játékfelületen \\
+			\hline
+			Adatbázis betöltése & Sikeres & Sikeresen betöltöttek az adatok \\
+			\hline
+			Két material reakciója & Sikeres & Új material jött létre, sikeres \\
+			\hline
+			Material és tool reakciója & Sikeres & Sikeres reakció \\
+			\hline
+			Kuka megjelenése & Sikeres & Kuka jó helyen jelent meg \\
+			\hline
+			Kuka reszponzívan tartja a helyét & Sikeres & Kuka jó helyen jelent meg \\
+			\hline
+			Kuka sprite váltása ha adott item van a közelében & Sikeres & A kuka megfelelően vált sprite-ot \\
+			\hline
+			Keresés jó eredményeket ad ki & Sikertelen (javítva) & A keresés nem ad ki nemlétező eredményeket \\
+			\hline
+			Az itemek pozícionálása ablakméret váltáskor & Sikeres & Az itemek megfelelő helyen vannak ablakméret váltáskor \\
+			\hline
+			A hotbár reszponzív & Sikertelen (javítva) & Nagyításkor eltűnik - rossz pozícionálás, javítva\\
+			\hline
+			Itemek adatainak kiíratása & Sikeres & Megfelel adatok jelennek meg az itemek alatt \\
+			\hline
+			Hotbar léptetése a materials itemeknél & Sikeres & Összes item megtekinthető \\
+			\hline
+			Sprite-ok megjelnése & Sikeres & A sprite-ok megfelelően jelennek meg \\
+			\hline
+		\end{tabular}
+		\caption{Manuális teszt jegyzőkönyv}
+		\label{MTeszt-jegyzokonyv}
+	\end{table}
+	
+	\section{Automatikus tesztelés}
+	\begin{table}[ht!]
+		\centering
+		\footnotesize
+		\begin{tabular}{|>{\centering}m{4.5cm}|>{\centering}m{3cm}|>{\centering\arraybackslash}m{7cm}|}
+			\hline
+			\textbf{Funkció} & \textbf{Leírás} & \textbf{Opciók/Példák} \\
+			\hline
+			get\_recipe() függvény működése  H2O-ra, NaCl-ra CO-ra,CO2-ra, & Sikeres & Megfelelően visszadja a kiinduló alapanyagokat \\
+			\hline
+			can\_react() függvény működése H2+O2-re & Sikeres & Sikeres reakciótalálat \\
+			\hline
+			can\_react() függvény negatív teszteset Na+Cl-re & Sikeres & Sikeres, nem talált reakciót \\
+			\hline
+			check() függvény tesztelése & Sikeres & Az anyag létrejött \\
+			\hline
+			check() függvény tesztelése több kimenetre & Sikeres & Reakció után megfelelő számú anyag spawnolt \\
+			\hline
+			reaction() függvény tesztelése, használt itemek törlése & Sikeres & Reakció után az itemek törlődnek \\
+			\hline
+			delete\_item() függvény tesztelése & Sikeres & Item sikeresen törlődik\\
+			\hline
+			trash\_hover() függvény működése & Sikeres & Megfelelően működik\\
+			\hline
+			trash\_draw() függvény működése & Sikeres & Megfelelően kirajzolódik\\
+			\hline
+		\end{tabular}
+		\caption{Automatikus tesztelési jegyzőkönyv}
+		\label{ATeszt-jegyzokonyv}
+	\end{table}
+	Az automatikus tesztek megvalósításához a Mockito \cite{Mockito} keretrendszert alkalmaztam. A Mockito egy népszerű Java-alapú mocking könyvtár, amely lehetővé teszi tesztkörnyezetben helyettesítő objektumok létrehozását tényleges függőségek helyett.
+	
+	A Mockito használatával a függőségek viselkedése előre definiálható, valamint ellenőrizhető, hogy egy adott metódus milyen paraméterekkel és hányszor került meghívásra. Ez növeli a tesztek megbízhatóságát és olvashatóságát.
+	
+	\chapter{Összegzés}
+	
+	A szakdolgozat célja egy Python alapú, grafikus felülettel rendelkező oktatási alkalmazás megvalósítása volt, amely a kémiai reakciók tanulását játékos és vizuális formában támogatja. A fejlesztés során egy olyan rendszer létrehozása került előtérbe, amely nem csupán bemutatja a reakciókat, hanem interaktív módon lehetőséget biztosít azok kipróbálására és megértésére is.
+	
+	A megvalósított alkalmazás több szempontból is sikeresen teljesítette az eredetileg kitűzött követelményeket. A Pygame alapú grafikus felület biztosítja a felhasználói interakciókat, míg a MySQL adatbázis háttér lehetővé teszi a reakciók és anyagok rugalmas kezelését. A moduláris, MVC-szerű architektúra hozzájárult a rendszer átláthatóságához és bővíthetőségéhez, amely különösen fontos egy oktatási célú szoftver esetében.
+	
+	A fejlesztés során kiemelt szerepet kapott a felhasználói élmény kialakítása. A drag-and-drop mechanizmus, a reszponzív felület, valamint a vizuális visszajelzések mind azt a célt szolgálták, hogy a tanulási folyamat minél intuitívabb és motiválóbb legyen. A tesztelési fázis során megfigyelhető volt, hogy a felhasználók gyorsan elsajátítják az alkalmazás használatát, és a vizuális elemek jelentősen segítik az összefüggések megértését.
+	
+	A projekt elkészítése során számos technikai és tervezési kihívással kellett szembenézni, például az adatbázis és a játéklogika szinkronizálásával, valamint a valós idejű interakciók hatékony kezelésével. Ezek megoldása hozzájárult a programozási és rendszertervezési ismereteim elmélyítéséhez.
+	
+	A rendszer jelenlegi formájában stabilan működik, azonban több irányban is továbbfejleszthető. Ilyen lehet például a hang- és vizuális effektek bevezetése, a reakciók animálása, valamint egy részletesebb oktatási modul kialakítása, amely lépésről lépésre vezeti végig a tanulókat a kémiai folyamatokon.
+	
+	Összességében elmondható, hogy a létrehozott alkalmazás nemcsak technikai szempontból sikeres, hanem pedagógiai értéket is képvisel. A projekt rávilágított arra, hogy az informatika és az oktatás hatékony kombinációja jelentős mértékben hozzájárulhat a tanulási folyamatok modernizálásához és élményszerűbbé tételéhez.
+	
+	\begin{thebibliography}{2}
+		\addcontentsline{toc}{chapter}{\bibname}
+		\bibitem{Piskel}
+		\textsc{Piskel}: \emph{Online pixel art és sprite szerkesztő}, https://www.piskelapp.com/ (Letöltés: 2026.04.21.)
+		
+		\bibitem{Python}
+		\textsc{Python Software Foundation}: \emph{Python 3 hivatalos dokumentáció}, https://docs.python.org/3/ (Letöltés: 2026.04.21.)
+		
+		\bibitem{PyGame}
+		\textsc{Pygame}: \emph{Hivatalos Pygame dokumentáció}, https://www.pygame.org/docs/ (Letöltés: 2026.04.21.)
+		
+		\bibitem{PyCharm}
+		\textsc{JetBrains}: \emph{PyCharm Getting Started – Hivatalos bevezető és útmutató}, https://www.jetbrains.com/help/pycharm/getting-started.html (Letöltés: 2026.04.21.)
+		
+		\bibitem{Apache}
+		\textsc{Apache Friends}: \emph{XAMPP hivatalos letöltési és dokumentációs oldal}, https://www.apachefriends.org/ (Letöltés: 2026.04.21.)
+		
+		\bibitem{phpMyAdmin}
+		\textsc{phpMyAdmin}: \emph{Hivatalos phpMyAdmin dokumentáció és letöltési oldal}, https://www.phpmyadmin.net/ (Letöltés: 2026.04.21.)
+		
+		\bibitem{GitHub}
+		\textsc{GitHub}: \emph{GitHub témák és dokumentációs gyűjtemények}, https://github.com/topics/documentation (Letöltés: 2026.04.21.)
+		
+		\bibitem{VisualStudioCode}
+		\textsc{Microsoft}: \emph{Visual Studio Code hivatalos dokumentáció}, https://code.visualstudio.com/docs (Letöltés: 2026.04.21.)
+		
+		\bibitem{Git}
+		\textsc{Git}: \emph{Hivatalos Git dokumentáció}, https://git-scm.com/docs (Letöltés: 2026.04.21.)
+		
+		\bibitem{dbDiagram}
+		\textsc{dbdiagram.io}: \emph{Hivatalos dokumentáció – adatbázis diagramok és DBML leírás}, https://docs.dbdiagram.io/ (Letöltés: 2026.04.21.)
+		
+		\bibitem{Oracle}
+		\textsc{Oracle}: \emph{MySQL Connector/Python hivatalos dokumentáció}, https://dev.mysql.com/doc/connector-python/en/ (Letöltés: 2026.04.21.)
+		
+		\bibitem{C++}
+		\textsc{DevDocs}: \emph{C++ referencia dokumentáció (C/C++ API és standard library leírások gyűjteménye)}, https://devdocs.io/cpp/ (Letöltés: 2026.04.21.)
+		
+		\bibitem{C-Sharp}
+		\textsc{Microsoft Learn}: \emph{C\# hivatalos dokumentáció és útmutató (.NET platform)}, https://learn.microsoft.com/en-us/dotnet/csharp/ (Letöltés: 2026.04.21.)
+		
+		\bibitem{Java}
+		\textsc{Oracle}: \emph{Java Platform, Standard Edition (Java SE) hivatalos dokumentáció}, https://docs.oracle.com/en/java/ (Letöltés: 2026.04.21.)
+		
+		\bibitem{SQL}
+		\textsc{W3Schools}: \emph{SQL Tutorial és referenciaanyag (SQL nyelv alapjai, lekérdezések és példák)}, https://www.w3schools.com/sql/ (Letöltés: 2026.04.21.)
+	
+		\bibitem{Mockito}
+		\textsc{Mockito}: \emph{Hivatalos Mockito dokumentáció és felhasználói útmutató}, https://site.mockito.org/ (Letöltés: 2026.04.21.)
+		
+		\bibitem{Kombination}
+		\textsc{ITU Online}: \emph{What Is Python Pygame?}, https://www.ituonline.com/tech-definitions/what-is-python-pygame/ (Letöltés: 2026.04.21.)
+		
+		
+		\bibitem{PyGame2}
+		\textsc{Dr. M. K. Jayanthi Kannan}: \emph{Introduction to Pygame and Game Development using Python Pygame}, ResearchGate, https://www.researchgate.net/publication/377064275\_Introduction\_to\_Pygame\_and\_Game\_Development\_using\_Python\_Pygame\_by\_Dr\_MK\_Jayanthi\_Kannan (Letöltés: 2026.04.21.)
+		
+		\bibitem{SDL}
+		\textsc{Simple DirectMedia Layer (SDL)}: \emph{Official SDL homepage}, https://www.libsdl.org/ (Letöltés: 2026.04.21.)
+		
+	\end{thebibliography}
+	
+	\includepdf{Nyilatkozat.pdf} 
+	
+\end{document}
