@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.24)  22 APR 2026 21:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.24)  22 APR 2026 22:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -758,6 +758,12 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [10] [11]
 3. fejezet.
+
+Overfull \hbox (3.78687pt too wide) in paragraph at lines 205--206
+\T1/lmr/m/n/12 gat-ják a fel-hasz-ná-lói mo-ti-vá-ció nö-ve-lé-sét és a ta-nu-l
+ás ak-tí-vab-bá té-te-lét. A gamifikáció[[]]
+ []
+
 [12
 
 ]
@@ -816,22 +822,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 368--369
 
  []
 
-<hotbarM.png, id=392, 759.58781pt x 115.18031pt>
+<hotbarM.png, id=396, 759.58781pt x 115.18031pt>
 File: hotbarM.png Graphic file (type png)
 <use hotbarM.png>
 Package pdftex.def Info: hotbarM.png  used on input line 375.
 (pdftex.def)             Requested size: 308.71106pt x 46.8112pt.
-<hotbarT.png, id=394, 602.25pt x 117.43875pt>
+<hotbarT.png, id=398, 602.25pt x 117.43875pt>
 File: hotbarT.png Graphic file (type png)
 <use hotbarT.png>
 Package pdftex.def Info: hotbarT.png  used on input line 382.
 (pdftex.def)             Requested size: 308.71106pt x 60.20117pt.
-<trashClosed.png, id=397, 67.75313pt x 64.74188pt>
+<trashClosed.png, id=401, 67.75313pt x 64.74188pt>
 File: trashClosed.png Graphic file (type png)
 <use trashClosed.png>
 Package pdftex.def Info: trashClosed.png  used on input line 403.
 (pdftex.def)             Requested size: 176.40439pt x 168.57088pt.
-<trashOpen.png, id=398, 73.02281pt x 56.46094pt>
+<trashOpen.png, id=402, 73.02281pt x 56.46094pt>
 File: trashOpen.png Graphic file (type png)
 <use trashOpen.png>
 Package pdftex.def Info: trashOpen.png  used on input line 410.
@@ -864,7 +870,7 @@ Overfull \hbox (11.23914pt too wide) in paragraph at lines 565--566
 ál-ja (item1,item2,result,equation,type). Item1
  []
 
-<dataBaseStructure.png, id=461, 322.20375pt x 142.28156pt>
+<dataBaseStructure.png, id=465, 322.20375pt x 142.28156pt>
 File: dataBaseStructure.png Graphic file (type png)
 <use dataBaseStructure.png>
 Package pdftex.def Info: dataBaseStructure.png  used on input line 573.
@@ -873,12 +879,12 @@ Package pdftex.def Info: dataBaseStructure.png  used on input line 573.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [23]
-<Pipetta.png, id=473, 32.12pt x 32.12pt>
+<Pipetta.png, id=477, 32.12pt x 32.12pt>
 File: Pipetta.png Graphic file (type png)
 <use Pipetta.png>
 Package pdftex.def Info: Pipetta.png  used on input line 601.
 (pdftex.def)             Requested size: 198.45662pt x 198.52135pt.
-<Pipetta(H2O).png, id=474, 32.12pt x 32.12pt>
+<Pipetta(H2O).png, id=478, 32.12pt x 32.12pt>
 File: Pipetta(H2O).png Graphic file (type png)
 <use Pipetta(H2O).png>
 Package pdftex.def Info: Pipetta(H2O).png  used on input line 608.
@@ -1037,32 +1043,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 837--838
 t/12 Of-fi-ci-al SDL home-page\T1/lmr/m/n/12 ,
  []
 
-<Nyilatkozat.pdf, id=530, 598.235pt x 845.1575pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--850
+[]\T1/lmr/m/sc/12 Sharma, Wa-mi-ka ^^U Lim, Weng Marc ^^U Ku-mar, Sa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--850
+\T1/lmr/m/sc/12 tish ^^U Ver-ma, Aast-ha ^^U Kum-ra, Ra-je-ev\T1/lmr/m/n/12 : \
+T1/lmr/m/it/12 Game on!
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--850
+\T1/lmr/m/it/12 A state-of-the-art over-view of do-ing busi-ness with ga-mi-fi-
+ca-ti-on\T1/lmr/m/n/12 ,
+ []
+
+<Nyilatkozat.pdf, id=534, 598.235pt x 845.1575pt>
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf>
-Package pdftex.def Info: Nyilatkozat.pdf  used on input line 847.
+Package pdftex.def Info: Nyilatkozat.pdf  used on input line 853.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
-<Nyilatkozat.pdf, id=532, page=1, 598.235pt x 845.1575pt>
+<Nyilatkozat.pdf, id=536, page=1, 598.235pt x 845.1575pt>
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 847.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 853.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 847.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 853.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 [32]
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 847.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 853.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 847.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 853.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 847.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 853.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
  [33
 
@@ -1075,10 +1098,10 @@ Package rerunfilecheck Info: File `EY52H0_2026.out' has not changed.
 (rerunfilecheck)             Checksum: DDAC9BC1A744AC50CF762376D9B36F21;8087.
  ) 
 Here is how much of TeX's memory you used:
- 18173 strings out of 467537
- 293689 string characters out of 5423703
- 942490 words of memory out of 5000000
- 46652 multiletter control sequences out of 15000+600000
+ 18179 strings out of 467537
+ 293772 string characters out of 5423703
+ 942567 words of memory out of 5000000
+ 46656 multiletter control sequences out of 15000+600000
  704582 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,93p,602b,1424s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1089,10 +1112,10 @@ mr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2025/texmf-dist/fo
 nts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/
 lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on EY52H0_2026.pdf (33 pages, 394819 bytes).
+Output written on EY52H0_2026.pdf (33 pages, 396345 bytes).
 PDF statistics:
- 657 PDF objects out of 1000 (max. 8388607)
- 566 compressed objects within 6 object streams
- 146 named destinations out of 1000 (max. 500000)
+ 661 PDF objects out of 1000 (max. 8388607)
+ 570 compressed objects within 6 object streams
+ 148 named destinations out of 1000 (max. 500000)
  422 words of extra memory for PDF output out of 10000 (max. 10000000)
 
