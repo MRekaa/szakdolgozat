@@ -598,14 +598,14 @@
 		
 		\begin{minipage}{0.45\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{img/tools/Pipetta.png}
+			\includegraphics[width=\textwidth]{Pipetta.png}
 			\caption{Pipetta sprite}
 			\label{fig:Pipetta}
 		\end{minipage}
 		\hfill
 		\begin{minipage}{0.45\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{img/materials/Pipetta(H2O).png}
+			\includegraphics[width=\textwidth]{Pipetta(H2O).png}
 			\caption{Pipetta(H2O) sprite}
 			\label{fig:Pipetta(H2O)}
 		\end{minipage}
@@ -617,23 +617,9 @@
 	A program futtatásához a következő lépések szükségesek:
 	\begin{itemize}
 		\item Python 3.10 telepítése és virtuális környezet létrehozása a projekt mappájában.
-		\item A szükséges csomagok telepítése a virtuális környezetbe: 
-		
-		\texttt{pygame} és \texttt{mysql-connector-python}.
-		\item MySQL szerver futtatása a helyi gépen, és a \texttt{labor} nevű adatbázis létrehozása.
-		\item Az adatbázishoz tartozó táblák: \texttt{reactions}, \texttt{materials}, \texttt{tools}.
-		\item A \texttt{src/config.py} modul beolvassa az adatokat az adatbázisból, így a táblák helyes struktúrája és tartalma szükséges a program működéséhez.
-		\item Ha a \texttt{mysql-connector-python} csomag hiányzik, vagy a MySQL nem elérhető, a \texttt{src/dataBase.py} hibaüzenetet ad, és a betöltés üres lista lesz.
+		\item A szükséges csomagok telepítése a virtuális környezetbe a requirements.txt segítségével.
+		\item MySQL szerver futtatása a helyi gépen, és a database.txt tartalmának bemásolása sql lekérdezésbe.
 	\end{itemize}
-	
-	Az alkalmazás indítása előtt aktiválni kell a virtuális környezetet, majd a fő scriptet kell futtatni:
-	\begin{itemize}
-		\item PowerShell-ben a környezet aktiválása: \texttt{.\textbackslash venv\textbackslash Scripts\textbackslash Activate.ps1}
-		\item A játék elindítása: \texttt{.\textbackslash venv\textbackslash Scripts\textbackslash python.exe src/main.py}
-		\item Ha a virtuális környezet már aktív, elég közvetlenül futtatni: \texttt{python src/main.py}
-	\end{itemize}
-	
-	Ha nincs \texttt{requirements.txt}, akkor a csomagokat kézzel kell telepíteni a fent említett módon.
 	
 	\chapter{Tesztelés}
 	

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.24)  22 APR 2026 20:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.24)  22 APR 2026 21:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -873,76 +873,68 @@ Package pdftex.def Info: dataBaseStructure.png  used on input line 573.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [23]
-<img/tools/Pipetta.png, id=451, 32.12pt x 32.12pt>
-File: img/tools/Pipetta.png Graphic file (type png)
-<use img/tools/Pipetta.png>
-Package pdftex.def Info: img/tools/Pipetta.png  used on input line 601.
+<Pipetta.png, id=451, 32.12pt x 32.12pt>
+File: Pipetta.png Graphic file (type png)
+<use Pipetta.png>
+Package pdftex.def Info: Pipetta.png  used on input line 601.
 (pdftex.def)             Requested size: 198.45662pt x 198.52135pt.
-<img/materials/Pipetta(H2O).png, id=452, 32.12pt x 32.12pt>
-File: img/materials/Pipetta(H2O).png Graphic file (type png)
-<use img/materials/Pipetta(H2O).png>
-Package pdftex.def Info: img/materials/Pipetta(H2O).png  used on input line 608
-.
+<Pipetta(H2O).png, id=452, 32.12pt x 32.12pt>
+File: Pipetta(H2O).png Graphic file (type png)
+<use Pipetta(H2O).png>
+Package pdftex.def Info: Pipetta(H2O).png  used on input line 608.
 (pdftex.def)             Requested size: 198.45662pt x 198.52135pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24 <./dataBaseStructure.png>] [25 <./img/tools/Pipetta.png> <./img/materials/P
-ipetta(H2O).png>]
+[24 <./dataBaseStructure.png>] [25 <./Pipetta.png> <./Pipetta(H2O).png>]
 5. fejezet.
-
-Overfull \hbox (4.6159pt too wide) in paragraph at lines 633--634
-[]\T1/lmr/m/n/12 Ha a vir-tu-á-lis kör-nye-zet már ak-tív, elég köz-vet-le-nül 
-fut-tat-ni: \T1/lmtt/m/n/12 python src/main.py 
- []
-
 [26
 
 ]
 6. fejezet.
 
-Overfull \hbox (9.14719pt too wide) in paragraph at lines 644--679
+Overfull \hbox (9.14719pt too wide) in paragraph at lines 630--665
  [][] 
  []
 
 
-Underfull \hbox (badness 2547) in paragraph at lines 692--693
+Underfull \hbox (badness 2547) in paragraph at lines 678--679
 []|\T1/lmr/m/n/10 H2O re-ak-ció in-teg-rá-ci-ós
  []
 
 
-Underfull \hbox (badness 1303) in paragraph at lines 693--694
+Underfull \hbox (badness 1303) in paragraph at lines 679--680
 []|\T1/lmr/m/n/10 H2 + O2 el-he-lye-zé-se a
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 694--695
+Underfull \hbox (badness 1769) in paragraph at lines 680--681
 \T1/lmr/m/n/10 a pá-rost, can_react(H2,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 701--702
+Underfull \hbox (badness 10000) in paragraph at lines 687--688
 []|\T1/lmr/m/n/10 Reaction.check() fut,
  []
 
 
-Underfull \hbox (badness 4156) in paragraph at lines 701--702
+Underfull \hbox (badness 4156) in paragraph at lines 687--688
 \T1/lmr/m/n/10 can_react(Na, Cl) nem
  []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 701--702
+Underfull \hbox (badness 1642) in paragraph at lines 687--688
 \T1/lmr/m/n/10 ta-lál adat-bá-zis-be-li egye-
  []
 
 
-Overfull \hbox (49.99994pt too wide) in paragraph at lines 688--707
+Overfull \hbox (49.99994pt too wide) in paragraph at lines 674--693
  [][] 
  []
 
 
-Overfull \hbox (9.14719pt too wide) in paragraph at lines 716--739
+Overfull \hbox (9.14719pt too wide) in paragraph at lines 702--725
  [][] 
  []
 
@@ -951,7 +943,7 @@ Overfull \hbox (9.14719pt too wide) in paragraph at lines 716--739
 ] [28]
 7. fejezet.
 
-Overfull \hbox (2.8091pt too wide) in paragraph at lines 756--757
+Overfull \hbox (2.8091pt too wide) in paragraph at lines 742--743
 []\T1/lmr/m/n/12 További kor-lát, hogy az al-kal-ma-zás tel-jes adatbázis-betöl
 tésre épül, így nagy mennyi-
  []
@@ -959,55 +951,55 @@ tésre épül, így nagy mennyi-
 [29
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 766--767
+Underfull \hbox (badness 10000) in paragraph at lines 752--753
 []\T1/lmr/m/sc/12 Python Soft-ware Fo-un-da-ti-on\T1/lmr/m/n/12 : \T1/lmr/m/it/
 12 Py-thon 3 hi-va-ta-los do-ku-men-tá-ció\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 5832) in paragraph at lines 772--773
+Underfull \hbox (badness 5832) in paragraph at lines 758--759
 []\T1/lmr/m/sc/12 JetBrains\T1/lmr/m/n/12 : \T1/lmr/m/it/12 PyCharm Gett-ing St
 ar-ted ^^U Hi-va-ta-los be-ve-ze-t® és út-mu-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 772--773
+Underfull \hbox (badness 10000) in paragraph at lines 758--759
 \T1/lmr/m/it/12 tó\T1/lmr/m/n/12 , https://www.jetbrains.com/help/pycharm/getti
 ng-started.html (Le-töl-tés:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 775--776
+Underfull \hbox (badness 10000) in paragraph at lines 761--762
 []\T1/lmr/m/sc/12 Apache Fri-ends\T1/lmr/m/n/12 : \T1/lmr/m/it/12 XAMPP hi-va-t
 a-los le-töl-té-si és do-ku-men-tá-ci-ós ol-dal\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 778--779
+Underfull \hbox (badness 10000) in paragraph at lines 764--765
 []\T1/lmr/m/sc/12 phpMyAdmin\T1/lmr/m/n/12 : \T1/lmr/m/it/12 Hi-va-ta-los phpMy
 -Ad-min do-ku-men-tá-ció és le-töl-té-si ol-dal\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 781--782
+Underfull \hbox (badness 10000) in paragraph at lines 767--768
 []\T1/lmr/m/sc/12 GitHub\T1/lmr/m/n/12 : \T1/lmr/m/it/12 Git-Hub té-mák és do-k
 u-men-tá-ci-ós gy¶j-te-mé-nyek\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 784--785
+Underfull \hbox (badness 10000) in paragraph at lines 770--771
 []\T1/lmr/m/sc/12 Microsoft\T1/lmr/m/n/12 : \T1/lmr/m/it/12 Vi-su-al Stu-dio Co
 -de hi-va-ta-los do-ku-men-tá-ció\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 787--788
+Underfull \hbox (badness 10000) in paragraph at lines 773--774
 []\T1/lmr/m/sc/12 Git\T1/lmr/m/n/12 : \T1/lmr/m/it/12 Hi-va-ta-los Git do-ku-me
 n-tá-ció\T1/lmr/m/n/12 , https://git-scm.com/docs (Le-töl-tés:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--794
+Underfull \hbox (badness 10000) in paragraph at lines 779--780
 []\T1/lmr/m/sc/12 Oracle\T1/lmr/m/n/12 : \T1/lmr/m/it/12 MySQL Con-nec-tor/Pyth
 on hi-va-ta-los do-ku-men-tá-ció\T1/lmr/m/n/12 ,
  []
@@ -1015,31 +1007,31 @@ on hi-va-ta-los do-ku-men-tá-ció\T1/lmr/m/n/12 ,
 [30
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 808--809
+Underfull \hbox (badness 10000) in paragraph at lines 794--795
 []\T1/lmr/m/sc/12 Mockito\T1/lmr/m/n/12 : \T1/lmr/m/it/12 Hi-va-ta-los Mo-cki-t
 o do-ku-men-tá-ció és fel-hasz-ná-lói út-mu-ta-tó\T1/lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 1292) in paragraph at lines 811--812
+Underfull \hbox (badness 1292) in paragraph at lines 797--798
 []\T1/lmr/m/sc/12 ITU On-line\T1/lmr/m/n/12 : \T1/lmr/m/it/12 What Is Py-thon P
 y-game?\T1/lmr/m/n/12 , https://www.ituonline.com/tech-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 815--816
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
 []\T1/lmr/m/sc/12 Dr. M. K. Jayant-hi Kan-nan\T1/lmr/m/n/12 : \T1/lmr/m/it/12 I
 nt-ro-duc-ti-on to Py-game
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 815--816
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
 \T1/lmr/m/it/12 and Game De-ve-lop-ment us-ing Py-thon Py-game\T1/lmr/m/n/12 , 
 Re-se-arch-Ga-te,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 818--819
+Underfull \hbox (badness 10000) in paragraph at lines 804--805
 []\T1/lmr/m/sc/12 Simple Di-rect-Me-dia Layer (SDL)\T1/lmr/m/n/12 : \T1/lmr/m/i
 t/12 Of-fi-ci-al SDL home-page\T1/lmr/m/n/12 ,
  []
@@ -1047,29 +1039,29 @@ t/12 Of-fi-ci-al SDL home-page\T1/lmr/m/n/12 ,
 <Nyilatkozat.pdf, id=502, 598.235pt x 845.1575pt>
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf>
-Package pdftex.def Info: Nyilatkozat.pdf  used on input line 828.
+Package pdftex.def Info: Nyilatkozat.pdf  used on input line 814.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
 <Nyilatkozat.pdf, id=504, page=1, 598.235pt x 845.1575pt>
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 828.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 814.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 828.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 814.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 [31]
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 828.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 814.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 828.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 814.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 File: Nyilatkozat.pdf Graphic file (type pdf)
 <use Nyilatkozat.pdf, page 1>
-Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 828.
+Package pdftex.def Info: Nyilatkozat.pdf , page1 used on input line 814.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
  [32
 
@@ -1083,7 +1075,7 @@ Package rerunfilecheck Info: File `EY52H0_2026.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  18164 strings out of 467537
- 293715 string characters out of 5423703
+ 293547 string characters out of 5423703
  942518 words of memory out of 5000000
  46647 multiletter control sequences out of 15000+600000
  704582 words of font info for 101 fonts, out of 8000000 for 9000
@@ -1096,7 +1088,7 @@ mr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2025/texmf-dist/fo
 nts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/
 lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on EY52H0_2026.pdf (32 pages, 392736 bytes).
+Output written on EY52H0_2026.pdf (32 pages, 391515 bytes).
 PDF statistics:
  630 PDF objects out of 1000 (max. 8388607)
  540 compressed objects within 6 object streams
