@@ -12,6 +12,7 @@
 \usepackage{media9}
 \usepackage{xcolor}
 \usepackage{listings}
+\usepackage{placeins}
 
 \begin{document}
 	
@@ -55,7 +56,7 @@
 	\section{Téma bemutatása}
 	
 	A szakdolgozat célja egy olyan oktatási célú játékalkalmazás fejlesztése, amely virtuális laboratóriumi	környezetben támogatja kémiai reakciók gyakorlását.
-	Az alkalmazás elsődleges célja, hogy támogassa a tanulók kémiai ismereteinek elmélyítését, valamint játékos formában segítse az összefüggések megértését.Emellett fontos cél volt, hogy a diákok tanári segítség nélkül is gyakorolhassák az órán tanult vegyületek előállításának lépéseit.
+	Az alkalmazás elsődleges célja, hogy támogassa a tanulók kémiai ismereteinek elmélyítését, valamint játékos formában segítse az összefüggések megértését. Emellett fontos cél volt, hogy a diákok tanári segítség nélkül is gyakorolhassák az órán tanult vegyületek előállításának lépéseit.
 	
 	A program lehetőséget biztosít különböző anyagok és eszközök kiválasztására, játékmezőre helyezésére	és a reakciók automatikus felismerésére.
 	
@@ -67,11 +68,9 @@
 	
 	Véleményem szerint a modern oktatásban egyre nagyobb szerepet kapnak a digitális eszközök, különösen azok az interaktív alkalmazások, amelyek képesek a tanulási folyamatot szemléletesebbé és élményszerűbbé tenni.
 	
-	A kémia tantárgy sajátossága, hogy az elméleti ismeretek mellett fontos szerepet kap a gyakorlati megvalósítás. Sok tanuló számára hatékonyabb lehet, ha az elméleti reakciókat vizuálisan és interaktívan is megfigyelheti A laboratóriumi kísérletek segítik a tanulókat abban, hogy jobban megértsék az anyagok tulajdonságait, valamint a különböző reakciók sorrendjét. Ugyanakkor a valós laboratóriumi környezet használata sok esetben korlátozott, mivel speciális eszközöket, anyagokat és biztonságos körülményeket igényel.
+	A kémia tantárgy sajátossága, hogy az elméleti ismeretek mellett fontos szerepet kap a gyakorlati megvalósítás. Sok tanuló számára hatékonyabb lehet, ha az elméleti reakciókat vizuálisan és interaktívan is megfigyelheti. A laboratóriumi kísérletek segítik a tanulókat abban, hogy jobban megértsék az anyagok tulajdonságait, valamint a különböző reakciók sorrendjét. Ugyanakkor a valós laboratóriumi környezet használata sok esetben korlátozott, mivel speciális eszközöket, anyagokat és biztonságos körülményeket igényel.
 	
 	A virtuális laboratóriumi környezet azért hasznos, mert veszélytelen és költséghatékony gyakorlási lehetőséget biztosít. Ezen kívül a játékos megközelítés motiváló hatással lehet a diákokra, különösen a fiatalabb korosztály számára.
-	
-	\section{Hasonló alkalmazások}
 	
 	\chapter{Technológiai áttekintés} 
 	\section{Programozási nyelvek}
@@ -90,7 +89,7 @@
 		\item \textbf{Gyors fejlesztés:} A dinamikus típusrendszer lehetővé teszi, hogy a változók típusait nem szükséges előre deklarálni.
 		\item \textbf{Gazdag könyvtárkészlet:} A Pythonhoz számos, különböző feladatokra használható könyvtár érhető el.
 		\item \textbf{Keresztplatformosság:} A Python programok Windows, Linux és macOS rendszereken azonos módon futtathatóak.
-		\item \textbf{Oktatási célokra alkalmas:} A Python széles körben használt oktatási nyelvként, amely ezáltal ideális egy  célú alkalmazáshoz.
+		\item \textbf{Oktatási célokra alkalmas:} A Python széles körben használt oktatási nyelvként, amely ezáltal ideális oktatási célú alkalmazás fejlesztéséhez
 	\end{itemize}
 	
 	\textbf{Korlátai}
@@ -102,15 +101,16 @@
 	
 	\subsection{SQL}
 	
-	A Structured Query Language (röviden SQL\cite{SQL}) az IBM-nél indult fejlesztésként jelent meg az 1970-es években, és relációs adatbázisok kezelésére szolgál. Főbb lehetőségei a lekérdezés, módosítás, törlés illetve adatbázis létrehozása és kezelése.
+	A Structured Query Language (röviden SQL\cite{SQL}) az IBM-nél indult fejlesztésként jelent meg az 1970-es években, és relációs adatbázisok kezelésére szolgál. Főbb feladatai közé tartozik az adatok lekérdezése, módosítása és törlése, valamint adatbázisok létrehozása és kezelése.
+	
 	
 	A projektben MySQL-t használtam, mert alkalmas a reakciók, anyagok és eszközök strukturált tárolására
 	
 	\section{GitHub}
 	
-	A GitHub\cite{GitHub} egy webalapú platform, szolgáltatás mely a Git\cite{Git} verziókezelő rendszerre épül. Fontos szerepet játszik a kód online tárolásában és elérhetőségében. Lehetőséget ad több fejlesztő együttműködésére és a kód verziókezelésére.
+	A GitHub\cite{GitHub} egy webalapú platform, mely a Git\cite{Git} verziókezelő rendszerre épül. Fontos szerepet játszik a kód online tárolásában és elérhetőségében. Lehetőséget ad több fejlesztő együttműködésére és a kód verziókezelésére.
 	
-	A fejlesztést lokálisan végeztem, GitHubot pedig elsősorban a forráskód publikálására és beadási elérhetővé tételére használtam.
+	A fejlesztést lokálisan végeztem, a GitHubot pedig elsősorban a forráskód publikálására és a beadáskor történő elérhetővé tételére használtam
 	
 	\textbf{A Git lehetővé teszi:}
 	\begin{itemize}
@@ -131,7 +131,7 @@
 	\section{Fejlesztői környezetek}
 	\subsection{PyCharm}
 	
-	A projekt megvalósítása során elsődleges fejlesztői környezetként a \textbf{PyCharm}\cite{PyCharm} integrált fejlesztői környezetet (IDE) alkalmaztam, amelyet a JetBrains fejlesztett kifejezetten Python alapú projektekhez. A választás egyik fő oka ismét gimnáziumi éveimbe nyúlik vissza, ahol megismertem a fejlesztőkörnyezetet és megszerettem.
+	A projekt megvalósítása során elsődleges fejlesztői környezetként a \textbf{PyCharm}\cite{PyCharm} integrált fejlesztői környezetet (IDE) alkalmaztam, amelyet a JetBrains fejlesztett kifejezetten Python alapú projektekhez. A PyCharm választását korábbi fejlesztési tapasztalataim, valamint a Python-projektekhez nyújtott integrált támogatása indokolta.
 	
 	A PyCharm számos olyan funkciót biztosít, amely jelentősen megkönnyítette a fejlesztési folyamatot. Ezek közé tartozik a szintaxiskiemelés, a hibák valós idejű jelzése, valamint a refaktorálási lehetőségek. Ezek az eszközök hozzájárultak a kód olvashatóságának javításához és a hibák számának csökkentéséhez.
 	
@@ -153,7 +153,8 @@
 	
 	Grafikus megjelenése miatt elősegíti az adatbázisok vizuális megjelenését és azok módosításait. Alapszintű műveletek grafikus felületen is elvégezhetők, ugyanakkor az adatbázis helyes tervezéséhez és ellenőrzéséhez SQL-ismeret szükséges.
 	
-	Böngészőben futtatható felület, amely a háttérben egy MySQL szerverként dolgozik, XAMPP\cite{Apache} rendszerekben elterjedt.
+	A phpMyAdmin böngészőben futtatható kezelőfelület, amely MySQL-adatbázisok adminisztrációját támogatja.
+	
 	
 	\subsection{Elérhetőségi linkek}
 	
@@ -189,7 +190,7 @@
 	
 	A \texttt{mysql-connector-python} könyvtár előnye, hogy stabil és megbízható adatbázis-hozzáférést biztosít, valamint támogatja a hibakezelést is, például sikertelen kapcsolódás vagy hibás SQL lekérdezés esetén.
 	
-	A csomag használata lehetővé tette, hogy az alkalmazás adatvezérelt módon működjön, így az  és reakciók hozzáadása egyszerűen, az adatbázis bővítésével megvalósítható, a programkód  módosítása nélkül.
+	A csomag használata lehetővé tette, hogy az alkalmazás adatvezérelt módon működjön, így az anyagok, eszközök és reakciók hozzáadása egyszerűen, az adatbázis bővítésével megvalósítható, a programkód  módosítása nélkül.
 	
 	A mysql-connector-python a projektre legmegfelelőbb választás, mivel közvetlenül és megbízhatóan csatlakozik a MySQL adatbázishoz.
 	
@@ -198,17 +199,18 @@
 	
 	A Python alapú 2D-s rendszer a kémiai reakciók játékos tanulását támogatja, lehetővé téve a diákok számára a vizuális gyakorlást egy számítógépes labor környezetben. 
 	
-	A játék lehetőséget biztosít különböző anyagok és eszközök kombinálására, amelyek segítségével új vegyületek hozhatók létre. Ez a folyamat hozzájárul a tanulók memóriájának fejlesztéséhez, valamint az összefüggések könnyebb megértéséhez. Az anyagok vizuális megjelenítése továbbá elősegíti a tudat alatti, könnyebb és hatékonyabb tanulási folyamatot.
+	A játék lehetőséget biztosít különböző anyagok és eszközök kombinálására, amelyek segítségével új vegyületek hozhatók létre. Ez a folyamat hozzájárul a tanulók memóriájának fejlesztéséhez, valamint az összefüggések könnyebb megértéséhez. Az anyagok vizuális megjelenítése támogathatja a fogalmak könnyebb felismerését és a reakciók	közötti kapcsolatok megértését.
 	
 	\section{Gamifikáció}
 	
-	A tervezése során kiemelt szempontom volt a gamifikáció\cite{Gamifikacio} alkalmazása, ami olyan játékmechanikai elemek oktatási környezetbe történő beépítését értjük, amelyek támogatják a felhasználói motiváció növelését és a tanulás aktívabbá tételét. A gamifikáció\cite{Gamifikacio2} oktatási szerepe főként a motiváció erősítésében jelenik meg, különösen fontos a természettudományos, nyers fogalmak tanulása során, mint amilyenek a kémiai reakciók is.
+	A rendszertervezése során kiemelt szempontom volt a gamifikáció\cite{Gamifikacio} Ez játékmechanikai elemek oktatási környezetbe történő beépítését jelenti, amelyek támogatják a felhasználói motiváció növelését és a tanulás aktívabbá tételét. A gamifikáció\cite{Gamifikacio2} oktatási szerepe főként a motiváció erősítésében jelenik meg, különösen fontos a természettudományos, elvont fogalmak tanulása során, mint amilyenek a kémiai reakciók is.
 	
-	Az program megközelítése lehetővé teszi az önálló felfedezésen alapuló tanulást, ahol a tanulók nem egy előre meghatározott, lineáris útvonalon haladnak, hanem szabadon próbálhatják ki az anyagokat és eszközöket. Saját tapasztalati úton fedezhetik fel a kémiai reakciókat, ami elősegíti a megértést és a hosszabb távú tudást. Minden interakcióra azonnali vizuális megjelenés történik, ezzel támogatva a tanulás hatékonyságát.
+	A program megközelítése lehetővé teszi az önálló felfedezésen alapuló tanulást, ahol a tanulók nem egy előre meghatározott, lineáris útvonalon haladnak, hanem szabadon próbálhatják ki az anyagokat és eszközöket. Saját tapasztalati úton fedezhetik fel a kémiai reakciókat, ami elősegíti a megértést és a hosszabb távú tudást. Minden interakcióra azonnali vizuális megjelenés történik, ezzel támogatva a tanulás hatékonyságát.
 	
-	Fontos volt az is, hogy a hibázás kockázatmentes legyen, ne legyen büntető rendszer, hátráltató tényező. Így egy biztonságos kísérletezési környezetet teremtve, ahol a tanuló aktív tapasztalatszerzésen keresztül bővíthetik tudásukat. A beépített keresőrendszer segítséget nyújt  elakadás során, ezáltal nem érheti kudarc a felhasználót tanulás során.
+	Fontos volt az is, hogy a hibázás kockázatmentes legyen, ne legyen büntető rendszer, hátráltató tényező. Így egy biztonságos kísérletezési környezetet teremtve, ahol a tanulók aktív tapasztalatszerzésen keresztül bővíthetik tudásukat. A beépített keresőrendszer segítséget nyújt  elakadás során, ezáltal nem érheti kudarc a felhasználót tanulás során.
 	
-	A vizuális megjelenés, tovább erősíti a tanulási akarást és élményt. Az tudás nem csak egy receptoron érkezik az agyba, hanem több módon is, olvashatja és láthatja a fejleményeket. Ezek biztosítják, hogy az program ne csupán egy eszköz legyen, hanem egy motiváló, élményalapú tanulási környezet.
+	A vizuális megjelenés, tovább erősíti a tanulási akarást és élményt. A tanulási folyamatot többféle visszajelzés támogatja: a felhasználó egyszerre látja az elemeket,
+	olvassa a reakció eredményét, és interakcióba lép a rendszerrel. Ezek biztosítják, hogy az program ne csupán egy eszköz legyen, hanem egy motiváló, élményalapú tanulási környezet.
 	
 	\section{Követelmények listája} 
 	\subsection{Funkcionális követelmények}
@@ -281,14 +283,12 @@
 	
 	Az adatbázis MySQL alapú, fő táblái a következők:
 	\begin{itemize}
-		\item  Tárolja a reakciókat (item1, item2, result, equation, type). Az item1 és item2 kombinációja hozza létre a result, eredmény anyagot. Az equation tárolja a kémiai reakció egyenletét, a type adja meg a result típusát.
+		\item  A reactions tábla tárolja a reakciókat az item1, item2, result, equation és type mezők segítségével.
 		\item  Az elérhető anyagok listája (name).
 		\item  Az elérhető eszközök listája (name).
 	\end{itemize}
 	
-	\section{Osztálydiagram}
-	
-	\textbf{Fő osztályok:}
+	\section{Fő osztályok:}
 	\begin{itemize}
 		\item Main (fő vezérlő)
 		\item ItemOnBoard (itemek a játékmezőn)
@@ -339,8 +339,8 @@
 	Fő feladata:
 	\begin{itemize}
 		\item Az egyes itemek adatainak tárolása: pozíció, típus (anyag/eszköz), méret, kép
-		\item Az items pozíciójának frissítése drag-and-drop műveletek során
-		\item Az items megjelenítésének koordinálása a Pygame-gal
+		\item Az itemek pozíciójának frissítése drag-and-drop műveletek során
+		\item Az itemek megjelenítésének koordinálása a Pygame-gal
 		\item Ütközésdetekció: annak meghatározása, hogy mely itemek kombinálódnak\cite{Kombination}
 		\item Az objektumok közötti lehetséges reakciópárok azonosítása
 	\end{itemize}
@@ -363,7 +363,7 @@
 	\begin{itemize}
 		\item \textbf{hotbar.py}: Az alap hotbar funkciót biztosítja, kezeli az eszköztár pozícióját, méretét és a reszponzivitást az ablakméret-változásokra.
 		\item \textbf{materialsH.py}: Az elérhető anyagok listáját jeleníti meg egy léptethető sávban, az adatbázisból betöltött adatok alapján.
-		\item \textbf{hotbar.py}: Az elérhető eszközöket jeleníti meg hasonló módon.
+		\item \textbf{toolsH.py}: Az elérhető eszközöket jeleníti meg hasonló módon.
 	\end{itemize}
 	Ezek a komponensek kommunikálnak a \texttt{config.py}-vel az adatok lekérdezéséhez, és az ItemOnBoard-dal az új objektumok létrehozásához, amikor a felhasználó kiválaszt egy anyagot vagy eszközt.\\
 	
@@ -388,9 +388,9 @@
 		
 	\subsubsection{Trash komponens (trash.py)}
 	
-	A Trash osztály az objektumok törléséhez szükséges felhasználói felületi komponenst valósítja meg. Alapvető feladatai közé tartozik a törlési zóna megjelenítése és pozícionálása az ablak egy rögzített helyén (jobb felső sarkokban).
+	A Trash osztály az objektumok törléséhez szükséges felhasználói felületi komponenst valósítja meg. Alapvető feladatai közé tartozik a törlési zóna megjelenítése és pozícionálása az ablak egy rögzített helyén, a jobb felső sarokban.
 	Az egérmozgás figyelése és annak detektálása, hogy mely objektumok vannak a törlési zónában
-	Visual feedbacket ad, a kuka sprite-jának frissítésével ha egy adott item a zónába kerül.
+	Vizuális visszajelzést ad, ha egy item a törlési zónába kerül, a kuka sprite-ja megváltozik
 	A változást a \ref{fig:trashClosed}. illetve \ref{fig:trashOpen}. ábra szemlélteti.
 	
 	Ez a komponens szoros kapcsolatban áll az ItemOnBoard-dal, mivel a kuka sprite zónájába kerülő objektumok eltávolításra kerülnek az ItemOnBoard listájából, ezáltal törölve lesznek a játékfelületről is.
@@ -435,13 +435,13 @@
 	
 	\subsubsection{Tool/materials osztály (/materials.py)}
 	
-	Az objektumokat definiáló osztályok. A \ref{fig:tools}. ábra a tools osztályt mutatja be.
+	Az objektumokat definiáló osztályok. A \ref{fig:tools}. ábra a ToolsH osztály egyszerűsített felépítését mutatja be
 	
 	\lstinputlisting[style=pythonstyle,caption=Tool osztály,label=fig:tools]{tool.py}
 	
 	\subsubsection{Settings modul (settings.py)}
 	
-	Az alkalmazás beállításait és konstansait tárja:
+	Az alkalmazás beállításait és konstansait tárolja:
 	\begin{itemize}
 		\item Grafikai beállítások: színek, betűtípusok, margók
 		\item Az ablak alapmérete és reszponzivitási szabályai
@@ -457,7 +457,7 @@
 	\begin{enumerate}
 		\item Az alkalmazás indításakor a \texttt{config.py} modul betölti az adatbázisból az összes rendelkezésre álló anyagot, eszközt és kémiai reakciót.
 		\item A \texttt{main.py} inicializálja a Pygame-ot és elindítja a fő játékciklust.
-		\item Minden frame-ben a rendszer feldolgozza az felhasználói eseményeket: egér eseményeket, mozgásokat és drag-and-drop operációkat.
+		\item Minden képkockában a rendszer feldolgozza a felhasználói eseményeke: egér eseményeket, mozgásokat és drag-and-drop operációkat.
 		\item Az ItemOnBoard komponens frissíti az objektumok pozícióit a felhasználói inputok alapján.
 		\item A Reaction modul folyamatosan ellenőrzi az objektumok közötti távolságot, és ha az előfeltételek teljesülnek, reakciókat indít el.
 		\item A Pygame végül rendereli a frissített állapotot a képernyőre.
@@ -470,7 +470,7 @@
 	A Pygame egy Python alapú grafikus könyvtár, amely SDL (Simple DirectMedia Layer) fölött működik. Az alkalmazásban a Pygame a következő feladatokat végzi:
 	
 	\begin{itemize}
-		\item \textbf{Ablak és megjelenítés:} A Pygame kezeli az alkalmazás ablakát, a felbontást és az átméretezést. Az \texttt{pygame.display} modul kezelő feladata az ablakhoz való rajzolás és az image renderelés.
+		\item \textbf{Ablak és megjelenítés:} A Pygame kezeli az alkalmazás ablakát, a felbontást és az átméretezést. A \texttt{pygame.display} modul kezeli az ablak létrehozását és a képernyő frissítését.
 		
 		\item \textbf{Eseménykezelés:} A Pygame az \texttt{pygame.event} modulon keresztül kezeli az összes felhasználói inputot:
 		\begin{itemize}
@@ -489,7 +489,7 @@
 	Az alkalmazás MySQL adatbázist használ. Az integráció:
 	
 	\begin{itemize}
-		\item \textbf{mysql-connector-python csomag:} Ez a csomag a MySQL szerver és a Python alkalmazás közötti kommunikációt kezelik. Az \texttt{dataBase.py} modul az alábbi műveleteket végzi:
+		\item \textbf{mysql-connector-python csomag:} Ez a csomag a MySQL szerver és a Python alkalmazás közötti kommunikációt kezeli. Az \texttt{dataBase.py} modul az alábbi műveleteket végzi:
 		\begin{itemize}
 			\item Kapcsolódás a MySQL szerverhez felhasználónév és jelszó alapján
 			\item SQL lekérdezések végrehajtása: SELECT
@@ -513,7 +513,7 @@
 		
 		\item \textbf{Main → ItemOnBoard:} A Main osztály kezeli az egéresemények feldolgozását és továbbítja azokat az ItemOnBoard osztálynak.
 		
-		\item \textbf{ItemOnBoard → Reaction:} Az ItemOnBoard objektumokat hoznak létre és nyomon követik, majd az kombinációk után átadja az információkat a Reaction modulnak.
+		\item \textbf{ItemOnBoard → Reaction:} Az ItemOnBoard modul nyomon követi a játékmezőn lévő objektumokat, majd a lehetséges kombinációkról információt ad át a Reaction modulnak.
 		
 		\item \textbf{Reaction → Config:} A Reaction modul lekérdezi a lehetséges recepteket a Config modulból.
 		
@@ -530,7 +530,7 @@
 	\begin{itemize}
 		\item \textbf{Adatbázis-hiba kezelés:} Ha a MySQL szerver nem érhető el az indítás során, a \texttt{dataBase.py} hibaüzenetet jelenít meg, és az alkalmazás üres listákkal próbál továbblépni.
 		
-		\item \textbf{Képbetöltési hibák:} Ha egy kép nem található, a Pygame egy alapértelmezett nem a képet jeleníti meg, hanem az item nevét.
+		\item \textbf{Képbetöltési hibák:} Ha egy kép nem található, az alkalmazás fallback-megoldásként az item nevét jeleníti meg.
 		
 		\item \textbf{Ablak-átméretezési hibaelkerülés:} A Settings modul biztosítja, hogy az ablak átméretezésekor az összes komponens a helyes pozícióban maradjon.
 	\end{itemize}
@@ -574,8 +574,8 @@
 		\caption{Adatbázis felépítése}
 		\label{fig:database}
 	\end{figure}
-	Az adatbázis kapcsolatokat nem tartalmaz, mivel a további feldolgozást a program végzi.
 	
+	Az adatbázis kapcsolatokat illetve kulcsokat nem tartalmaz, a további feldolgozást a program végzi.
 	
 	\section{Frontend}
 	
@@ -589,9 +589,9 @@
 	
 	\subsubsection{Képek}
 	
-	A játékban használt grafikai elemeket a Piskel\cite{Piskel} online szerkesztő segítségével készültek. Az sprite-ok PNG formátumú, átlátszó hátterű képek, amelyek könnyedén felhasználhatóak a PyGame segítségével.
+	A játékban használt grafikai elemeket a Piskel\cite{Piskel} online szerkesztő segítségével készültek. A sprite-ok PNG formátumú, átlátszó hátterű képek, amelyek könnyedén felhasználhatóak a PyGame segítségével.
 	
-	Ilyen sprite a \ref{fig:Pipetta}. ábrán látható pipetta eszköz is amely víz felvétele után a \ref{fig:Pipetta(H2O)}. ábra látható már anyagként.
+	Ilyen sprite a \ref{fig:Pipetta}. ábrán látható pipetta is, amely víz felvétele után már anyagként jelenik meg; ezt \ref{fig:Pipetta(H2O)}. ábra szemlélteti.
 	
 	\begin{figure}[h]
 		\centering
@@ -702,12 +702,13 @@
 		\label{MTeszt-jegyzokonyv}
 	\end{table}
 	
+	\FloatBarrier
 	\section{Integrációs tesztelési forgatókönyvek}
 	
 	\begin{table}[ht!]
 		\centering
 		\footnotesize
-		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{3.5cm}|}
+		\begin{tabular}{|p{3cm}|p{4cm}|p{4cm}|p{3cm}|}
 			\hline
 			\textbf{Teszt neve} & \textbf{Bemenet} & \textbf{Folyamat} & \textbf{Elvárt kimenet} \\
 			\hline
@@ -730,7 +731,7 @@
 		\label{tab:ITest}
 	\end{table}
 	
-	
+	\FloatBarrier
 	\section{Automatikus tesztelés}
 	\begin{table}[ht!]
 		\centering
@@ -761,9 +762,12 @@
 		\caption{Automatikus tesztelési jegyzőkönyv}
 		\label{ATeszt-jegyzokonyv}
 	\end{table}
+	
 	Az automatikus tesztek megvalósításához a Python beépített unittest.mock\cite{unittest_mock} könyvtárát, valamint a pytest\cite{pytest} tesztelési keretrendszert alkalmaztam. A unittest.mock lehetővé teszi helyettesítő objektumok létrehozását a valós függőségek kiváltására tesztkörnyezetben.
 	
 	A mock objektumok segítségével a függőségek viselkedése előre definiálható, valamint ellenőrizhető, hogy egy adott metódus milyen paraméterekkel és hányszor került meghívásra. Ez növeli a tesztek izoláltságát, megbízhatóságát és olvashatóságát, míg a pytest egyszerű és skálázható tesztfuttatást biztosít.
+	
+	Az automatikus tesztek futtatása a \texttt{python -m pytest src/test.py} paranccsal történik. A tesztfutás eredményei a \texttt{test\_results.txt} fájlba kerülnek.
 	
 	\chapter{Összegzés}
 	
@@ -773,7 +777,7 @@
 	
 	A rendszer jelenlegi formájában stabilan működik, azonban több irányban is továbbfejleszthető, például hang- és vizuális effektek, reakcióanimációk, valamint egy részletesebb oktatási modul bevezetésével.
 	
-	A rendszer jelenlegi korlátja a reakciókezelés implementációja. A \texttt{src/reaction.py} modulban alkalmazott \texttt{frozenset} alapú megközelítés egyszerű és hatékony az alap bináris reakciók kezelésére, azonban nem támogatja megfelelően az azonos reagenseket.. Ennek következtében a modell csak egyszerű, kétkomponensű reakciók esetén megbízható.
+	A rendszer jelenlegi korlátja a reakciókezelés implementációja. A \texttt{src/reaction.py} modulban alkalmazott \texttt{frozenset} alapú megközelítés egyszerű és hatékony az alap bináris reakciók kezelésére, azonban nem támogatja megfelelően az azonos reagenseket.
 	
 	További korlát, hogy az alkalmazás teljes adatbázis-betöltésre épül, így nagy mennyiségű adat esetén memóriahasználati problémák jelentkezhetnek, valamint az adatváltozások csak újraindítás után érvényesülnek.
 	
